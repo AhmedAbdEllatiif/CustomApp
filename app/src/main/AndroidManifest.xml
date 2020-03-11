@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ahmed.customapp">
 
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -16,37 +15,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true"
-        >
-        <activity android:name=".Calulator.CalculatorActivity">
-        </activity>
+        android:usesCleartextTraffic="true">
 
 
-        <activity
-            android:name=".QuranKareem.Splash"
-            android:theme="@style/AppTheme.bottomNavigation">
+        <activity android:name=".MasterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
 
-        <activity
-            android:name=".QuranKareem.Soura"
-            android:theme="@style/AppTheme.SlidrActivityTheme" />
+        <activity android:name=".Calulator.CalculatorActivity"
+            android:theme="@style/CalculatorTheme"/>
 
 
-        <activity
-            android:name=".QuranKareem.FragmentsContainer"
-            android:label="@string/title_activity_test_fragment"
+        <activity android:name=".QuranKareem.Splash"
             android:theme="@style/AppTheme.bottomNavigation"/>
+        <activity android:name=".QuranKareem.Soura"
+            android:theme="@style/AppTheme.SlidrActivityTheme" />
+        <activity android:name=".QuranKareem.FragmentsContainer"
+            android:label="@string/title_activity_test_fragment"
+            android:theme="@style/AppTheme.bottomNavigation" />
 
 
-        <activity android:name=".MainActivity"/>
-
-
-
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

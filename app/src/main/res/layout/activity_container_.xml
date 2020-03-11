@@ -9,7 +9,7 @@
     android:theme="@style/QuranTheme"
     >
 
-    <include layout="@layout/app_bar" android:id="@+id/appBarID"/>
+    <include layout="@layout/app_bar_quran_kareem" android:id="@+id/appBarID"/>
 
    <FrameLayout
        android:id="@+id/fragmentContainer"
