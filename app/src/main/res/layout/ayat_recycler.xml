@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuranKareem.Soura"
+    android:background="@drawable/soundback"
+    >
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".1"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottom"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".746"
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topOfRecycler"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintGuide_percent=".248"
+        />
+
+    <TextView
+        android:id="@+id/innerTxtSouraName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Soura Name"
+        android:textSize="45sp"
+        android:textColor="@color/txtcolor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ayatRecycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textSize="40sp"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/topOfRecycler"
+        app:layout_constraintBottom_toBottomOf="@id/bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,4 +11,13 @@
     <color name="orange">#ff8800</color>
     <color name="Gray">#41403f</color>
     <color name="lightGray">#aea9a4</color>
+
+
+    <!--Quran-->
+    <color name="quran_colorPrimary">#624c3e</color>
+    <color name="quran_colorPrimaryDark">#2a211b</color>
+    <color name="quran_colorAccent">#edc873</color>
+	<color name="fadewite">#407c604e</color>
+    <color name="txtcolor">#d8a954</color>
+
 </resources>
