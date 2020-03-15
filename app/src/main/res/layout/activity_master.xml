@@ -29,9 +29,19 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_quran"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_myApps"
+        />
+    <Button
+        android:id="@+id/btn_myApps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Apps"
+
+        app:layout_constraintTop_toBottomOf="@+id/btn_calculator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         />
-
 
 
 

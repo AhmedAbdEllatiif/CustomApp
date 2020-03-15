@@ -14,6 +14,8 @@ public class MasterActivity extends AppCompatActivity {
 
     private Button btn_quran;
     private Button btn_calculator;
+    private Button btn_myApps;
+
 
 
     @Override
@@ -31,12 +33,14 @@ public class MasterActivity extends AppCompatActivity {
     private void initViews(){
         btn_quran = findViewById(R.id.btn_quran);
         btn_calculator = findViewById(R.id.btn_calculator);
+        btn_myApps = findViewById(R.id.btn_myApps);
     }
 
 
     private void onViewClicked(){
         btn_quran.setOnClickListener(v -> openQuran());
         btn_calculator.setOnClickListener(v -> openCalculator());
+        btn_myApps.setOnClickListener(v -> openMyApps());
     }
 
     private void openQuran(){
@@ -46,6 +50,11 @@ public class MasterActivity extends AppCompatActivity {
 
     private void openCalculator(){
         Intent intent = new Intent(this, CalculatorActivity.class);
+        startActivity(intent);
+    }
+
+    private void openMyApps(){
+        Intent intent = new Intent(this, MyAppsActivity.class);
         startActivity(intent);
     }
 }

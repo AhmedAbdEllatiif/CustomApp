@@ -8,15 +8,25 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true">
+        android:theme="@style/AppTheme">
 
+        <activity android:name=".Calulator.CalculatorActivity"
+            android:theme="@style/CalculatorTheme">
+
+
+        </activity>
+
+
+        <activity android:name=".MainActivity">
+
+        </activity>
 
         <activity android:name=".MasterActivity">
             <intent-filter>
@@ -27,20 +37,22 @@
 
         </activity>
 
-        <activity android:name=".Calulator.CalculatorActivity"
-            android:theme="@style/CalculatorTheme"/>
-
+        <activity
+            android:name=".QuranKareem.Soura"
+            android:theme="@style/AppTheme.SlidrActivityTheme" />
 
         <activity android:name=".QuranKareem.Splash"
-            android:theme="@style/AppTheme.bottomNavigation"/>
-        <activity android:name=".QuranKareem.Soura"
-            android:theme="@style/AppTheme.SlidrActivityTheme" />
-        <activity android:name=".QuranKareem.FragmentsContainer"
-            android:label="@string/title_activity_test_fragment"
             android:theme="@style/AppTheme.bottomNavigation" />
 
+        <activity android:name=".MyAppsActivity"/>
 
-        <activity android:name=".MainActivity" />
+
+
+
+        <activity android:name=".QuranKareem.FragmentsContainer"
+            android:label="@string/title_activity_test_fragment"
+            android:theme="@style/AppTheme.bottomNavigation"></activity>
+
     </application>
 
 </manifest>

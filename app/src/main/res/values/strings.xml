@@ -23,4 +23,23 @@
     <string name="hadeath">Hadeath</string>
     <string name="radio">Radio</string>
     <string name="hello">Hello</string>
+    <string name="quran_kareem">Quran Kareem</string>
+    <string name="basic_calculator">Basic Calculator</string>
+    <string name="calculator_description">A calculator with basic functions add,multiply,division,Subtraction. Build with gridList,guidLines</string>
+    <string name="quran_description">A calculator with basic functions add,multiply,division,Subtraction. Build with gridList,guidLines</string>
+    <string name="open_quran">Open Quran</string>
+    <string name="open_calculator">Open Calculator</string>
+
+
+
+
+
+    <string name="title_1">Cool card</string>
+    <string name="title_2">Ok card</string>
+    <string name="title_3">Bad card</string>
+    <string name="title_4">Ugly card</string>
+
+    <string name="text_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Etiam eget ligula eu lectus lobortis condimentum.</string>
+    <string name="txt_description">Description</string>
+
 </resources>
