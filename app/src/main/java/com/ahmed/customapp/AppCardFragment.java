@@ -1,6 +1,11 @@
 package com.ahmed.customapp;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -73,7 +78,6 @@ public class AppCardFragment extends Fragment {
             if (cardFragmentOnClickListener != null){
                 if (appTitle_str != null){
                     cardFragmentOnClickListener.onClick(appTitle_str);
-
                 }
             }
         });
