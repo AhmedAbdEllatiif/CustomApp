@@ -24,6 +24,7 @@
             android:textColor="@color/black"
             android:textStyle="bold"
             android:textSize="25dp"
+            android:layout_marginTop="20dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -40,6 +41,13 @@
             />
 
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/fadedGray"
+            app:layout_constraintBottom_toTopOf="@+id/app_img_recyclerView"
+            />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/app_img_recyclerView"
             android:layout_width="wrap_content"
@@ -47,12 +55,19 @@
             android:layout_marginTop="20dp"
             android:padding="10dp"
             tools:listitem="@layout/card_app_image"
-            android:background="@drawable/my_frame"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_appTitle"
             app:layout_constraintBottom_toTopOf="@+id/guideline"
             />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/fadedGray"
+            app:layout_constraintTop_toBottomOf="@+id/app_img_recyclerView"
+            />
+
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/description_container"

@@ -46,7 +46,7 @@
 
         <activity android:name=".MyAppsActivity"/>
 
-
+        <activity android:name=".ProfileFragment"/>
 
 
         <activity android:name=".QuranKareem.FragmentsContainer"

@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.ahmed.customapp.Adapters.Decoration.CirclePagerIndicatorDecoration;
 import com.ahmed.customapp.Adapters.MyAppsAdapter;
 
 import java.util.List;
@@ -88,6 +89,7 @@ public class AppCardFragment extends Fragment {
         MyAppsAdapter adapter = new MyAppsAdapter(getContext(),imgList);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
+        recyclerView.addItemDecoration(new CirclePagerIndicatorDecoration(getActivity(), recyclerView));
     }
 
     private void addTitleToTextView(){

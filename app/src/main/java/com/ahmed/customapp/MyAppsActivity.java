@@ -28,6 +28,7 @@ public class MyAppsActivity extends BaseActivity implements
 
     private Button mButton;
     private ViewPager mViewPager;
+    private CheckBox checkBox;
 
     private CardPagerAdapter mCardAdapter;
     private ShadowTransformer mCardShadowTransformer;
@@ -42,27 +43,31 @@ public class MyAppsActivity extends BaseActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_apps);
         BitmapTransformation bitmapTransformation;
-
+        mViewPager = (ViewPager) findViewById(R.id.viewPager);
+        setupAppsPagerAdapter();
 
         ImageView imageView = findViewById(R.id.background);
-        RequestOptions requestOptions = new RequestOptions();
+       /* RequestOptions requestOptions = new RequestOptions();
         requestOptions.transform(new BlurTransformation(10)); // 0-100
         Glide.with(this).setDefaultRequestOptions(requestOptions)
-                .load(getDrawable(R.drawable.newbackground)).into(imageView);
+                .load(getDrawable(R.drawable.back1)).into(imageView);*/
 
 
-        mViewPager = (ViewPager) findViewById(R.id.viewPager);
+
         //mButton = (Button) findViewById(R.id.cardTypeBtn);
-        ((CheckBox) findViewById(R.id.checkBox)).setOnCheckedChangeListener(this);
-        //mButton.setOnClickListener(this);
+       //((CheckBox) findViewById(R.id.checkBox)).setOnCheckedChangeListener(this);
 
+        //mButton.setOnClickListener(this);
+        checkBox = findViewById(R.id.checkBox);
+        checkBox.setOnCheckedChangeListener(this);
+        checkBox.setChecked(true);
         /*mCardAdapter = new CardPagerAdapter();
         mCardAdapter.addCardItem(new CardItem(R.string.title_1, R.string.text_1,R.drawable.splash));
         mCardAdapter.addCardItem(new CardItem(R.string.title_2, R.string.text_1,R.drawable.splash));
         mCardAdapter.addCardItem(new CardItem(R.string.title_3, R.string.text_1,R.drawable.splash));
         mCardAdapter.addCardItem(new CardItem(R.string.title_4, R.string.text_1,R.drawable.splash));*/
 
-        setupAppsPagerAdapter();
+
 
     }
 

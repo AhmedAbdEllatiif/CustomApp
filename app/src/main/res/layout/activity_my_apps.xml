@@ -7,13 +7,12 @@
     android:fitsSystemWindows="true"
     >
 
-
-
     <ImageView
         android:id="@+id/background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="fitXY"
+        android:scaleType="center"
+        android:background="@drawable/blur_background"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,15 +25,14 @@
         android:layout_gravity="bottom"
         android:clipToPadding="false"
         android:overScrollMode="never"
-        android:paddingBottom="30dp"
+
         android:background="@android:color/transparent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/checkBox"
-        android:paddingEnd="@dimen/card_padding"
-        android:paddingLeft="@dimen/card_padding"
-        android:paddingRight="@dimen/card_padding"
-        android:paddingStart="@dimen/card_padding" />
-
+        android:paddingBottom="30dp"
+        android:paddingTop="30dp"
+        android:paddingEnd="35dp"
+        android:paddingStart="35dp" />
 
     <CheckBox
         android:id="@+id/checkBox"
