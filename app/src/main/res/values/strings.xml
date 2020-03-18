@@ -31,9 +31,6 @@
     <string name="open_calculator">Open Calculator</string>
 
 
-
-
-
     <string name="title_1">Cool card</string>
     <string name="title_2">Ok card</string>
     <string name="title_3">Bad card</string>
@@ -41,5 +38,13 @@
 
     <string name="text_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Etiam eget ligula eu lectus lobortis condimentum.</string>
     <string name="txt_description">Description</string>
+    <string name="my_name">Ahmed Mohamed Ahmed</string>
+    <string name="txt_email">Email</string>
+    <string name="call">Call</string>
+    <string name="contact_details">Contact details</string>
+    <string name="my_email">ahmedmohamedaneng@gmail.com</string>
+    <string name="about">About</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
 
 </resources>

@@ -8,7 +8,6 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,43 +15,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".Calulator.CalculatorActivity"
-            android:theme="@style/CalculatorTheme">
+        <activity android:name=".Test.AnimateActivity">
 
 
         </activity>
-
-
-        <activity android:name=".MainActivity">
-
-        </activity>
-
+        <activity
+            android:name=".Calulator.CalculatorActivity"
+            android:theme="@style/CalculatorTheme"></activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".MasterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
         <activity
             android:name=".QuranKareem.Soura"
             android:theme="@style/AppTheme.SlidrActivityTheme" />
-
-        <activity android:name=".QuranKareem.Splash"
+        <activity
+            android:name=".QuranKareem.Splash"
             android:theme="@style/AppTheme.bottomNavigation" />
-
-        <activity android:name=".MyAppsActivity"/>
-
-        <activity android:name=".ProfileFragment"/>
-
-
-        <activity android:name=".QuranKareem.FragmentsContainer"
+        <activity android:name=".MyAppsActivity" />
+        <activity android:name=".ProfileFragment" />
+        <activity
+            android:name=".QuranKareem.FragmentsContainer"
             android:label="@string/title_activity_test_fragment"
-            android:theme="@style/AppTheme.bottomNavigation"></activity>
-
+            android:theme="@style/AppTheme.bottomNavigation" />
     </application>
 
 </manifest>

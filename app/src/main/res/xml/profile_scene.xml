@@ -4,19 +4,24 @@
     <!-- A transition describes an animation via start and end state -->
     <Transition
         app:constraintSetEnd="@+id/end"
-        app:constraintSetStart="@+id/start">
+        app:constraintSetStart="@+id/start"
+        >
+    <OnSwipe
+        app:touchAnchorSide="right"
+        app:dragDirection="dragUp"/>
+
 
         <KeyFrameSet>
             <KeyPosition
                 app:framePosition="25"
                 app:keyPositionType="parentRelative"
-                app:motionTarget="@id/imageView2"
+                app:motionTarget="@id/img_profile"
                 app:percentY="0.7" />
 
             <KeyPosition
                 app:framePosition="25"
                 app:keyPositionType="parentRelative"
-                app:motionTarget="@id/textView6"
+                app:motionTarget="@id/txt_name"
                 app:percentX="0.5" />
 
 
@@ -24,36 +29,36 @@
 
                 android:elevation="25dp"
                 app:framePosition="25"
-                app:motionTarget="@id/imageView2" />
+                app:motionTarget="@id/img_profile" />
 
             <KeyAttribute
 
                 android:elevation="25dp"
                 app:framePosition="70"
-                app:motionTarget="@id/imageView2" />
+                app:motionTarget="@id/img_profile" />
 
             <KeyAttribute
 
                 android:elevation="0dp"
                 app:framePosition="100"
-                app:motionTarget="@id/imageView2" />
+                app:motionTarget="@id/img_profile" />
 
 
 
             <KeyAttribute
                 android:alpha="0.0"
                 app:framePosition="25"
-                app:motionTarget="@id/textView6" />
+                app:motionTarget="@id/txt_name" />
 
             <KeyAttribute
                 android:alpha="0.0"
                 app:framePosition="25"
-                app:motionTarget="@id/ly" />
+                app:motionTarget="@id/contacts_container" />
 
             <KeyAttribute
                 android:alpha="0.0"
                 app:framePosition="90"
-                app:motionTarget="@id/textView6" />
+                app:motionTarget="@id/txt_name" />
 
             <KeyAttribute
                 android:translationY="500dp"
@@ -66,7 +71,7 @@
     <ConstraintSet android:id="@+id/start">
 
         <Constraint
-            android:id="@id/imageView2"
+            android:id="@id/img_profile"
             android:layout_width="100dp"
             android:layout_height="100dp"
             app:layout_constraintBottom_toTopOf="@+id/anchor"
@@ -75,18 +80,18 @@
             app:layout_constraintTop_toTopOf="@+id/anchor" />
 
         <Constraint
-            android:id="@id/textView6"
+            android:id="@id/txt_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
             android:alpha="1.0"
-            app:layout_constraintEnd_toEndOf="@+id/imageView2"
-            app:layout_constraintStart_toStartOf="@+id/imageView2"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+            app:layout_constraintEnd_toEndOf="@+id/img_profile"
+            app:layout_constraintStart_toStartOf="@+id/img_profile"
+            app:layout_constraintTop_toBottomOf="@+id/img_profile" />
 
 
         <Constraint
-            android:id="@+id/ly"
+            android:id="@+id/contacts_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:alpha="1.0"
@@ -94,7 +99,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_name" />
 
     </ConstraintSet>
 
@@ -102,7 +107,7 @@
     <ConstraintSet android:id="@+id/end">
 
         <Constraint
-            android:id="@id/imageView2"
+            android:id="@id/img_profile"
             android:layout_width="?actionBarSize"
             android:layout_height="?actionBarSize"
             android:layout_marginStart="10dp"
@@ -111,17 +116,17 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <Constraint
-            android:id="@id/textView6"
+            android:id="@id/txt_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
             android:alpha="1.0"
-            app:layout_constraintBottom_toBottomOf="@id/imageView2"
-            app:layout_constraintStart_toEndOf="@id/imageView2"
-            app:layout_constraintTop_toTopOf="@id/imageView2" />
+            app:layout_constraintBottom_toBottomOf="@id/img_profile"
+            app:layout_constraintStart_toEndOf="@id/img_profile"
+            app:layout_constraintTop_toTopOf="@id/img_profile" />
 
         <Constraint
-            android:id="@+id/ly"
+            android:id="@+id/contacts_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:alpha="0.0"
@@ -129,6 +134,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_name" />
     </ConstraintSet>
 </MotionScene>
