@@ -40,7 +40,8 @@ public class Splash extends BaseActivity {
                         //overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                         ActivityOptions options = ActivityOptions
                                 .makeSceneTransitionAnimation(Splash.this,background, "robot");
-                        startActivity(intent, options.toBundle());
+                        //startActivity(intent, options.toBundle());
+                        startActivity(intent);
                         finish();
                     }
                 },1005);

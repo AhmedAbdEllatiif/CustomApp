@@ -8,7 +8,8 @@
         >
     <OnSwipe
         app:touchAnchorSide="right"
-        app:dragDirection="dragUp"/>
+        app:dragDirection="dragUp"
+        />
 
 
         <KeyFrameSet>
