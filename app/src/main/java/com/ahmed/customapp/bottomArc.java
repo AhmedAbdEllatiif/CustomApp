@@ -12,6 +12,7 @@ import android.graphics.RectF;
 import android.graphics.Region;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +21,7 @@ import android.widget.LinearLayout;
 
 import androidx.annotation.Nullable;
 
-public class CustomView extends FrameLayout {
+public class bottomArc extends FrameLayout {
     Paint mPaint, otherPaint, outerPaint, mTextPaint;
     RectF mRectF;
     int mPadding;
@@ -30,9 +31,9 @@ public class CustomView extends FrameLayout {
     Path mPath;
 
 
+    private static final String TAG = "bottomArc";
 
-
-    public CustomView(Context context, @Nullable AttributeSet attrs) {
+    public bottomArc(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         LayoutInflater.from(getContext()).inflate(R.layout.res, this,true);
 
@@ -48,7 +49,7 @@ public class CustomView extends FrameLayout {
         mPaint.setColor(Color.BLUE);
         mPaint.setStrokeWidth(5);
 
-
+/*
         mTextPaint = new Paint(Paint.LINEAR_TEXT_FLAG | Paint.ANTI_ALIAS_FLAG);
         mTextPaint.setColor(Color.BLACK);
         mTextPaint.setTextSize(pxFromDp(context, 24));
@@ -88,7 +89,7 @@ public class CustomView extends FrameLayout {
         mPath.lineTo(p3.x, p3.y);
         mPath.close();
 
-        mRectF = new RectF(screenWidth / 4, screenHeight / 3, screenWidth / 6, screenHeight / 2);
+        mRectF = new RectF(screenWidth / 4, screenHeight / 3, screenWidth / 6, screenHeight / 2);*/
 
     }
 
@@ -189,6 +190,7 @@ public class CustomView extends FrameLayout {
     Paint paint;
     Path path;
 
+
     @Override
     protected void dispatchDraw(Canvas canvas) {
         int count = canvas.getSaveCount();
@@ -196,24 +198,26 @@ public class CustomView extends FrameLayout {
         paint.setColor(Color.BLACK);
         paint.setStrokeWidth(3);
 
-        //arc path
-        //canvas.drawPaint(paint);
-        path.moveTo(0, (float) canvas.getHeight());
-        path.lineTo(0,300);
-        path.quadTo((float) canvas.getWidth() / 2, 600f, (float) canvas.getWidth(), 300f);
-        /*path.quadTo((float) canvas.getWidth() / 4, 600f, (float) canvas.getWidth()/2 , 300f);
-        path.quadTo((float) canvas.getWidth() / 2, 300f, (float) canvas.getWidth()*(3/4) , 600f);
-        path.quadTo((float) canvas.getWidth()*(3/4), 600f, (float) canvas.getWidth() , 300f);*/
-        path.lineTo((float)canvas.getWidth(), (float) canvas.getHeight());
+        float subtractRatio = (float) canvas.getHeight() * .496f;
+        float peakOfTheCurve = -(float) canvas.getHeight() + subtractRatio;
+        float canvasHeight = (float) canvas.getHeight();
+        float canvasWidth = (float) canvas.getWidth();
+        Log.e(TAG, "CanvasHeight: " +(float) canvas.getHeight());
+        Log.e(TAG, "peakOfTheCurve: " +peakOfTheCurve);
+        path.moveTo(0, canvasHeight);
+        path.lineTo(0,canvasHeight/2);
+        path.quadTo(canvasWidth / 2, peakOfTheCurve,
+                canvasWidth, canvasHeight/2);
+
+       path.lineTo(canvasWidth, canvasHeight);
 
         //canvas.clipPath(path, Region.Op.INTERSECT);
         canvas.clipPath(path);
-        canvas.restoreToCount(count);
         super.dispatchDraw(canvas);
+        canvas.restoreToCount(count);
 
 
-        //canvas.drawRect(0,0, canvas.getWidth(),canvas.getHeight()/2,paint);
-        //canvas.drawArc(50,0,canvas.getWidth()/2,canvas.getHeight()/2,0,150,true,paint);
+
     }
 }
 

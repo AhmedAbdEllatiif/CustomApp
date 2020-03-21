@@ -6,40 +6,100 @@
     android:layout_height="match_parent"
     tools:context=".WeActivity"
     android:id="@+id/mainView"
-    android:background="#fff"
+    android:background="@drawable/blur_background"
     >
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
+        android:id="@+id/guideline_30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3" />
+        app:layout_constraintGuide_percent="0.4" />
 
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/imageView"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="50dp"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_70"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
 
+
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/apps_recyclerView_home"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="@android:color/transparent"
+        tools:listitem="@layout/cardview_apps_home"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upperArc"
+        app:layout_constraintBottom_toTopOf="@+id/bottomArc"
+        />
+
+
+    <!--<de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/profile_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upperArc"
+        app:layout_constraintBottom_toTopOf="@+id/bottomArc"
+     />-->
+    <ImageView
+        android:id="@+id/img_next"
+        android:layout_width="35dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_next_arrow"
+        android:background="@drawable/move_rect"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/apps_recyclerView_home"
+        app:layout_constraintTop_toTopOf="@+id/apps_recyclerView_home"
+        app:layout_constraintBottom_toBottomOf="@+id/apps_recyclerView_home"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/img_back"
+        android:layout_width="35dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_previous_arrow"
+        android:background="@drawable/move_rect"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toStartOf="@+id/apps_recyclerView_home"
+        app:layout_constraintTop_toTopOf="@+id/apps_recyclerView_home"
+        app:layout_constraintBottom_toBottomOf="@+id/apps_recyclerView_home"
+        tools:ignore="ContentDescription" />
+
+
+
+    <com.ahmed.customapp.UpperArc
+        android:id="@+id/upperArc"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintTop_toTopOf="parent"
-     />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_30"
+        />
 
 
 
-
-
-    <com.ahmed.customapp.CustomView
-        android:id="@+id/customView"
+    <com.ahmed.customapp.bottomArc
+        android:id="@+id/bottomArc"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_70"
         />
 
 

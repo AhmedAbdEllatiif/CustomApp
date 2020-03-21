@@ -20,11 +20,7 @@
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
         <activity android:name=".Test.AnimateActivity"></activity>
@@ -33,7 +29,11 @@
             android:theme="@style/CalculatorTheme" />
         <activity android:name=".WeActivity" />
         <activity android:name=".MasterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".QuranKareem.Soura"

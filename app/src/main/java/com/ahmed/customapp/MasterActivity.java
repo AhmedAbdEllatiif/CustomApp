@@ -16,6 +16,8 @@ public class MasterActivity extends AppCompatActivity {
     private Button btn_calculator;
     private Button btn_myApps;
     private Button btn_Profile;
+    private Button btn_We;
+
 
 
 
@@ -37,6 +39,7 @@ public class MasterActivity extends AppCompatActivity {
         btn_calculator = findViewById(R.id.btn_calculator);
         btn_myApps = findViewById(R.id.btn_myApps);
         btn_Profile = findViewById(R.id.btn_Profile);
+        btn_We = findViewById(R.id.btn_We);
     }
 
 
@@ -45,6 +48,7 @@ public class MasterActivity extends AppCompatActivity {
         btn_calculator.setOnClickListener(v -> openCalculator());
         btn_myApps.setOnClickListener(v -> openMyApps());
         btn_Profile.setOnClickListener(v -> openMyProfile());
+        btn_We.setOnClickListener(v -> btn_We());
     }
 
     private void openQuran(){
@@ -64,6 +68,11 @@ public class MasterActivity extends AppCompatActivity {
 
     private void openMyProfile(){
         Intent intent = new Intent(this, ProfileFragment.class);
+        startActivity(intent);
+    }
+
+    private void btn_We(){
+        Intent intent = new Intent(this, WeActivity.class);
         startActivity(intent);
     }
 }
