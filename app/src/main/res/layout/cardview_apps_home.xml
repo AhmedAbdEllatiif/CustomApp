@@ -4,8 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-
-
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardElevation="0dp"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,17 +15,26 @@
         >
 
 
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@color/white"
+            android:padding="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/txt_appTitle"
+            />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/app_image"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/profile_img"
-            android:layout_margin="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-           app:layout_constraintBottom_toTopOf="@+id/txt_appTitle"
+            app:layout_constraintBottom_toTopOf="@+id/txt_appTitle"
             />
 
         <TextView
@@ -33,9 +42,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="App Name"
-            android:textColor="@color/black"
+            android:textColor="@color/colorPrimary"
             android:textSize="15dp"
-            android:layout_marginTop="5dp"
+            android:fontFamily="@font/cairo_semibold"
             android:padding="@dimen/txt_padding"
             app:layout_constraintStart_toStartOf="@+id/app_image"
             app:layout_constraintEnd_toEndOf="@+id/app_image"

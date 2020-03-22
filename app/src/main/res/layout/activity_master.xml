@@ -66,6 +66,17 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_Profile"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintBottom_toTopOf="@+id/btn_MainActivity"
+        />
+
+    <Button
+        android:id="@+id/btn_MainActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Main Activity"
+        app:layout_constraintTop_toBottomOf="@+id/btn_We"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         />
 

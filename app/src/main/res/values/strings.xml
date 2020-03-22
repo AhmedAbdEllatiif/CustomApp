@@ -24,6 +24,7 @@
     <string name="radio">Radio</string>
     <string name="hello">Hello</string>
     <string name="quran_kareem">Quran Kareem</string>
+    <string name="txt_zawia">Zawia</string>
     <string name="basic_calculator">Basic Calculator</string>
     <string name="calculator_description">A calculator with basic functions add,multiply,division,Subtraction. Build with gridList,guidLines</string>
     <string name="quran_description">A calculator with basic functions add,multiply,division,Subtraction. Build with gridList,guidLines</string>
