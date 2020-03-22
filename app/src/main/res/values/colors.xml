@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorPrimary">#37474f</color>
+    <color name="colorPrimaryDark">#102027</color>
+    <color name="ColorPrimaryLight">#62727b</color>
+    <color name="fadeColorPrimaryLight">#D062727B</color>
+    <color name="extremelyFadeColorPrimaryLight">#3262727B</color>
     <color name="colorAccent">#03DAC5</color>
 
 

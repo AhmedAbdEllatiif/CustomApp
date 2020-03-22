@@ -1,23 +1,15 @@
 package com.ahmed.customapp;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
-import android.graphics.Point;
-import android.graphics.Rect;
 import android.graphics.RectF;
-import android.graphics.Region;
 import android.util.AttributeSet;
-import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 
 import androidx.annotation.Nullable;
 
@@ -35,7 +27,7 @@ public class bottomArc extends FrameLayout {
 
     public bottomArc(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        LayoutInflater.from(getContext()).inflate(R.layout.res, this,true);
+        LayoutInflater.from(getContext()).inflate(R.layout.bottom_layout, this,true);
 
         //View view = LayoutInflater.from(context).inflate(R.layout.res,this);
 

@@ -1,15 +1,12 @@
 package com.ahmed.customapp;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
-import android.graphics.Point;
 import android.graphics.RectF;
 import android.util.AttributeSet;
-import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.widget.FrameLayout;
@@ -30,7 +27,7 @@ public class UpperArc extends FrameLayout {
     public UpperArc(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
 
-        LayoutInflater.from(getContext()).inflate(R.layout.res, this,true);
+        LayoutInflater.from(getContext()).inflate(R.layout.upper_layout, this,true);
         this.mPaint = mPaint;
         paint = new Paint();
         path = new Path();
