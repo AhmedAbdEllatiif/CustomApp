@@ -5,6 +5,7 @@
     <color name="ColorPrimaryLight">#62727b</color>
     <color name="fadeColorPrimaryLight">#D062727B</color>
     <color name="extremelyFadeColorPrimaryLight">#3262727B</color>
+    <color name="fadeGray">#41D5D3D3</color>
     <color name="colorAccent">#03DAC5</color>
 
 

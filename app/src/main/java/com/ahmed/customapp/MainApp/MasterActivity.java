@@ -7,8 +7,6 @@ import android.os.Bundle;
 import android.widget.Button;
 
 import com.ahmed.customapp.Calulator.CalculatorActivity;
-import com.ahmed.customapp.MainApp.MainActivity;
-import com.ahmed.customapp.MainApp.ProfileFragment;
 import com.ahmed.customapp.MyAppsActivity;
 import com.ahmed.customapp.QuranKareem.Splash;
 import com.ahmed.customapp.R;
@@ -21,7 +19,6 @@ public class MasterActivity extends AppCompatActivity {
     private Button btn_quran;
     private Button btn_calculator;
     private Button btn_myApps;
-    private Button btn_Profile;
     private Button btn_We;
     private Button btn_MainActivity;
     private Button btn_animate;
@@ -47,7 +44,6 @@ public class MasterActivity extends AppCompatActivity {
         btn_quran = findViewById(R.id.btn_quran);
         btn_calculator = findViewById(R.id.btn_calculator);
         btn_myApps = findViewById(R.id.btn_myApps);
-        btn_Profile = findViewById(R.id.btn_Profile);
         btn_We = findViewById(R.id.btn_We);
         btn_MainActivity = findViewById(R.id.btn_MainActivity);
         btn_animate = findViewById(R.id.btn_animate);
@@ -58,7 +54,6 @@ public class MasterActivity extends AppCompatActivity {
         btn_quran.setOnClickListener(v -> openQuran());
         btn_calculator.setOnClickListener(v -> openCalculator());
         btn_myApps.setOnClickListener(v -> openMyApps());
-        btn_Profile.setOnClickListener(v -> openMyProfile());
         btn_We.setOnClickListener(v -> btn_We());
         btn_MainActivity.setOnClickListener(v -> openMainActivity());
         btn_animate.setOnClickListener(v -> openAnimateActivity());
@@ -79,10 +74,6 @@ public class MasterActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void openMyProfile(){
-        Intent intent = new Intent(this, ProfileFragment.class);
-        startActivity(intent);
-    }
 
     private void btn_We(){
         Intent intent = new Intent(this, WeActivity.class);

@@ -47,8 +47,7 @@
         <!--MyAppsActivity-->
         <activity android:name=".MyAppsActivity" />
 
-        <!--ProfileActivity-->
-        <activity android:name=".MainApp.ProfileFragment" />
+
 
         <!--fragments container for quran-->
         <activity

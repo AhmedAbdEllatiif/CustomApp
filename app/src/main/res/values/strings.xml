@@ -62,5 +62,7 @@
     <string name="home_second">Home Second</string>
     <string name="profile">Profile</string>
     <string name="cv">CV</string>
+    <string name="title">Title</string>
+    <string name="_0_0">0/0</string>
 
 </resources>
