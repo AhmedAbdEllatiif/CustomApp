@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
-import com.ahmed.customapp.BaseFragment;
+import com.ahmed.customapp.BaseClasses.BaseFragment;
 import com.ahmed.customapp.QuranKareem.Adapters.RadioAdapter;
 import com.ahmed.customapp.QuranKareem.FragmentsContainer;
 import com.ahmed.customapp.QuranKareem.QuranApi.ApiManger;

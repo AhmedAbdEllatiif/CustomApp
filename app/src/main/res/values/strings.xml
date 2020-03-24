@@ -60,5 +60,7 @@
     <string name="menu_slideshow">Slideshow</string>
 
     <string name="home_second">Home Second</string>
+    <string name="profile">Profile</string>
+    <string name="cv">CV</string>
 
 </resources>

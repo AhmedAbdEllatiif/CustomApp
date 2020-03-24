@@ -1,4 +1,4 @@
-package com.ahmed.customapp.Models;
+package com.ahmed.customapp.MainApp.Models;
 
 public class MyAppsModel {
 

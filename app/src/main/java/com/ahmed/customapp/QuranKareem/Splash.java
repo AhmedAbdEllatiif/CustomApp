@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ImageView;
 
-import com.ahmed.customapp.BaseActivity;
+import com.ahmed.customapp.BaseClasses.BaseActivity;
 import com.ahmed.customapp.R;
 
 import androidx.constraintlayout.motion.widget.MotionLayout;

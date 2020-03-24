@@ -1,17 +1,11 @@
-package com.ahmed.customapp;
+package com.ahmed.customapp.MainApp;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
-import com.ahmed.customapp.BaseActivity;
-import com.ahmed.customapp.BaseFragment;
+import com.ahmed.customapp.BaseClasses.BaseActivity;
 import com.ahmed.customapp.R;
 import com.google.android.material.appbar.AppBarLayout;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.motion.widget.MotionLayout;
 

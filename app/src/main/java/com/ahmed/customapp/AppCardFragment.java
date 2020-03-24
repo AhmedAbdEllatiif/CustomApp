@@ -1,19 +1,14 @@
 package com.ahmed.customapp;
 
-import android.graphics.Color;
 import android.os.Bundle;
-import android.text.Html;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.ahmed.customapp.Adapters.Decoration.CirclePagerIndicatorDecoration;
-import com.ahmed.customapp.Adapters.MyAppsAdapter;
+import com.ahmed.customapp.MainApp.Adapters.Decoration.CirclePagerIndicatorDecoration;
+import com.ahmed.customapp.MainApp.Adapters.MyAppsAdapter;
 
 import java.util.List;
 

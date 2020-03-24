@@ -1,4 +1,4 @@
-package com.ahmed.customapp.Adapters;
+package com.ahmed.customapp.MainApp.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.ahmed.customapp.Models.MyAppsModel;
+import com.ahmed.customapp.MainApp.Models.MyAppsModel;
 import com.ahmed.customapp.R;
 
 import java.util.List;

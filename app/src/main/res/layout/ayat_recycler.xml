@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:text="Soura Name"
         android:textSize="45sp"
-        android:textColor="@color/txtcolor"
+        android:textColor="@color/txtColor_quran"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/top"

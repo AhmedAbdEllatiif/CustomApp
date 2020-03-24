@@ -1,4 +1,4 @@
-package com.ahmed.customapp;
+package com.ahmed.customapp.MainApp.Helpers;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -13,6 +13,8 @@ import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import com.ahmed.customapp.R;
 
 public class UpperArc extends FrameLayout {
 

@@ -1,25 +1,23 @@
-package com.ahmed.customapp.ui.home;
+package com.ahmed.customapp.MainApp.Fragments.home;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.PagerSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SnapHelper;
 
-import com.ahmed.customapp.Adapters.AppsAdapterHome;
-import com.ahmed.customapp.Models.MyAppsModel;
+import com.ahmed.customapp.MainApp.Adapters.AppsAdapterHome;
+import com.ahmed.customapp.MainApp.Models.MyAppsModel;
 import com.ahmed.customapp.R;
 
 import java.util.ArrayList;

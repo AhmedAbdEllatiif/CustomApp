@@ -1,9 +1,11 @@
-package com.ahmed.customapp;
+package com.ahmed.customapp.MainApp;
 
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ImageButton;
 
+import com.ahmed.customapp.BaseClasses.BaseActivity;
+import com.ahmed.customapp.R;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
@@ -11,7 +13,6 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.core.view.GravityCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 

@@ -1,4 +1,4 @@
-package com.ahmed.customapp;
+package com.ahmed.customapp.MainApp.Helpers;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -12,6 +12,8 @@ import android.view.LayoutInflater;
 import android.widget.FrameLayout;
 
 import androidx.annotation.Nullable;
+
+import com.ahmed.customapp.R;
 
 public class bottomArc extends FrameLayout {
     Paint mPaint, otherPaint, outerPaint, mTextPaint;

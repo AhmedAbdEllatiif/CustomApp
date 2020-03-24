@@ -9,8 +9,8 @@ import androidx.recyclerview.widget.SnapHelper;
 import android.os.Bundle;
 import android.widget.ImageView;
 
-import com.ahmed.customapp.Adapters.AppsAdapterHome;
-import com.ahmed.customapp.Models.MyAppsModel;
+import com.ahmed.customapp.MainApp.Adapters.AppsAdapterHome;
+import com.ahmed.customapp.MainApp.Models.MyAppsModel;
 
 import java.util.ArrayList;
 import java.util.List;

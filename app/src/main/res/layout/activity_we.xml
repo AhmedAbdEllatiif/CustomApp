@@ -24,7 +24,7 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.6" />
 
-    <com.ahmed.customapp.UpperArc
+    <com.ahmed.customapp.MainApp.Helpers.UpperArc
         android:id="@+id/upperArc"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -87,7 +87,7 @@
 
 
 
-    <com.ahmed.customapp.bottomArc
+    <com.ahmed.customapp.MainApp.Helpers.bottomArc
         android:id="@+id/bottomArc"
         android:layout_width="0dp"
         android:layout_height="0dp"

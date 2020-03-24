@@ -11,4 +11,9 @@
     <dimen name="fab_margin">16dp</dimen>
 
 
+    <!--To get perfect circle radius must be half of dimensions-->
+    <dimen name="card_dimens_main_activity">250dp</dimen>
+    <dimen name="card_corners_main_activity">125dp</dimen>
+
+
 </resources>

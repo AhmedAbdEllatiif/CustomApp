@@ -1,4 +1,4 @@
-package com.ahmed.customapp.ui.gallery;
+package com.ahmed.customapp.MainApp.Fragments.gallery;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

@@ -1,4 +1,4 @@
-package com.ahmed.customapp.Helpers;
+package com.ahmed.customapp.MainApp.Helpers;
 
 import android.graphics.Rect;
 import android.view.View;

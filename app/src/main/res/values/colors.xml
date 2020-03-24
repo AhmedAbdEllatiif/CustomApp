@@ -23,6 +23,6 @@
     <color name="quran_colorPrimaryDark">#2a211b</color>
     <color name="quran_colorAccent">#edc873</color>
 	<color name="fadewite">#407c604e</color>
-    <color name="txtcolor">#d8a954</color>
+    <color name="txtColor_quran">#d8a954</color>
 
 </resources>

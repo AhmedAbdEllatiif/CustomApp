@@ -1,8 +1,5 @@
-package com.ahmed.customapp.Helpers;
+package com.ahmed.customapp.MainApp.Helpers;
 
-import android.content.Context;
-
-import com.ahmed.customapp.AppCardFragment;
 import com.ahmed.customapp.R;
 
 import java.util.ArrayList;

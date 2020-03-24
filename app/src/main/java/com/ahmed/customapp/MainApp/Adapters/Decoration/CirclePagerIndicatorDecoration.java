@@ -1,4 +1,4 @@
-package com.ahmed.customapp.Adapters.Decoration;
+package com.ahmed.customapp.MainApp.Adapters.Decoration;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -13,8 +13,6 @@ import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.Interpolator;
 
-
-import com.ahmed.customapp.R;
 
 import java.util.Objects;
 

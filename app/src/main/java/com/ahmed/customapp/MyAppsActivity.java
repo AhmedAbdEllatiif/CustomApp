@@ -2,23 +2,20 @@ package com.ahmed.customapp;
 
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
-import jp.wasabeef.glide.transformations.BlurTransformation;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 
+import com.ahmed.customapp.BaseClasses.BaseActivity;
 import com.ahmed.customapp.Calulator.CalculatorActivity;
-import com.ahmed.customapp.Helpers.MyAppsFragmentsHelper;
+import com.ahmed.customapp.MainApp.Helpers.MyAppsFragmentsHelper;
 import com.ahmed.customapp.QuranKareem.Splash;
-import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.BitmapTransformation;
-import com.bumptech.glide.request.RequestOptions;
 
 import java.util.ArrayList;
 import java.util.List;

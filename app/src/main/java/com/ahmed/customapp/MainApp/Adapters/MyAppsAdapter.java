@@ -1,4 +1,4 @@
-package com.ahmed.customapp.Adapters;
+package com.ahmed.customapp.MainApp.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;

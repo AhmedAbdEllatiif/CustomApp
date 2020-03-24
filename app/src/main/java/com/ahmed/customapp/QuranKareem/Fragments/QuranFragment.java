@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.ahmed.customapp.BaseFragment;
+import com.ahmed.customapp.BaseClasses.BaseFragment;
 import com.ahmed.customapp.QuranKareem.Adapters.SouraListAdapter;
 import com.ahmed.customapp.QuranKareem.FragmentsContainer;
 import com.ahmed.customapp.QuranKareem.QuranModels.SouraModel;

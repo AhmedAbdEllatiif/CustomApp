@@ -1,4 +1,4 @@
-package com.ahmed.customapp.ui.slideshow;
+package com.ahmed.customapp.MainApp.Fragments.slideshow;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
