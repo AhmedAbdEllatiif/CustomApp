@@ -75,7 +75,7 @@
                     app:layout_constraintStart_toStartOf="@+id/img_profile"
                     app:layout_constraintTop_toBottomOf="@+id/img_profile" />
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/contacts_container"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -117,17 +117,30 @@
                             android:layout_height="0dp"
                             android:layout_weight="1" />
 
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cv"
+                            android:gravity="center"
+                            android:drawableTop="@drawable/ic_pdf"
+                            />
+
+
+
                         <Space
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:layout_weight="1" />
 
                         <TextView
+                            android:id="@+id/txt_call"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/call"
                             android:drawableTop="@android:drawable/ic_menu_call"
                             />
+
 
                         <Space
                             android:layout_width="0dp"
@@ -141,138 +154,47 @@
                         android:layout_height="1dp"
                         android:background="#D2D6DA" />
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
             </androidx.constraintlayout.motion.widget.MotionLayout>
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.core.widget.NestedScrollView
             android:id="@+id/nestedScrollView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="@android:color/white"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:orientation="vertical"
                 android:padding="15dp"
                 >
-                <TextView
-                    android:id="@+id/txt_contact_details"
-                    android:layout_width="wrap_content"
+
+                <include
+                    android:id="@+id/layout_profile_info"
+                    layout="@layout/profile_info"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="@string/contact_details"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/txt_email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:text="@string/my_email"
-                    android:gravity="center_vertical"
-                    android:background="@drawable/my_frame"
-                    android:drawableStart="@android:drawable/ic_dialog_email"
-                    android:paddingTop="5dp"
-                    android:paddingBottom="5dp"
-                    android:paddingStart="10dp"
-                    android:paddingEnd="10dp"
-                    android:layout_marginTop="10dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/txt_contact_details"
+                    app:layout_constraintTop_toTopOf="parent"
                     />
 
-
-                <TextView
-                    android:id="@+id/txt_gender"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/gender"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textStyle="bold"
-                    android:layout_marginTop="15dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/txt_email" />
-
-                <TextView
-                    android:id="@+id/txt_gender_var"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/male"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/txt_gender" />
-
-
-
-                <androidx.appcompat.widget.LinearLayoutCompat
+                <include
                     android:id="@+id/social_container"
+                    layout="@layout/social_media_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="4"
-                    android:gravity="center"
                     android:layout_marginTop="15dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/txt_gender_var"
-                    >
+                    app:layout_constraintTop_toBottomOf="@+id/layout_profile_info"
+                    />
 
-                    <ImageView
-                        android:id="@+id/img_fb"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_marginStart="15dp"
-                        app:srcCompat="@drawable/fb"
-                        tools:ignore="ContentDescription" />
-
-                    <ImageView
-                        android:id="@+id/img_whatsapp"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_marginStart="15dp"
-                        app:srcCompat="@drawable/img_whatsapp"
-                        tools:ignore="ContentDescription" />
-
-                    <ImageView
-                        android:id="@+id/img_instagram"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_marginStart="15dp"
-                        app:srcCompat="@drawable/img_instagram"
-                        tools:ignore="ContentDescription" />
-
-                    <ImageView
-                        android:id="@+id/img_linkedin"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_marginStart="15dp"
-                        app:srcCompat="@drawable/img_linkedin"
-                        tools:ignore="ContentDescription" />
-
-                    <ImageView
-                        android:id="@+id/img_github"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_marginStart="15dp"
-                        app:srcCompat="@drawable/img_github"
-                        tools:ignore="ContentDescription" />
-
-
-                </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-
-
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.core.widget.NestedScrollView>
-
-
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </LinearLayout>
 

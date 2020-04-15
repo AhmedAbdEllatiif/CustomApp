@@ -129,8 +129,8 @@ public class RadioFragment extends BaseFragment {
 
                     @Override
                     public void onFailure(Call<RadioResponse> call, Throwable t) {
-
-                        showMessage("Error", t.getLocalizedMessage());
+                        //TODO: check where is showMessage method it throws can not find symbol
+                        //showMessage("Error", t.getLocalizedMessage());
                     }
                 });
 

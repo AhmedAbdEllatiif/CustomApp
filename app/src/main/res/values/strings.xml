@@ -64,5 +64,17 @@
     <string name="cv">CV</string>
     <string name="title">Title</string>
     <string name="_0_0">0/0</string>
+    <string name="military_status">Military Status</string>
+    <string name="completed">Completed</string>
+    <string name="marital_status">Marital Status</string>
+    <string name="married">Married</string>
+    <string name="nationality">Nationality</string>
+    <string name="egyptian">Egyptian</string>
+
+    <string name="txt_no_browser_to_open">You do not have any browser to open web page</string>
+    <string name="some_thing_wrong">Some Thing Went Wrong</string>
+    <string name="txt_whats_app_not_installed">WhatsApp not installed</string>
+    <string name="my_num">01124466700</string>
+    <string name="cv_name">cv.pdf</string>
 
 </resources>

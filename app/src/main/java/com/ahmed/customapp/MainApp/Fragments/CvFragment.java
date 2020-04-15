@@ -54,47 +54,66 @@ public class CvFragment extends BaseFragment implements OnTapListener, OnPageScr
     }
 
 
+    /**
+     * To initialize views
+     * */
     private void initViews(){
         cv_pdf = view.findViewById(R.id.cv_pdf);
         txt_page = view.findViewById(R.id.txt_page);
         pdf_num_container = view.findViewById(R.id.pdf_num_container);
     }
 
+    /**
+     * To hide or show page num
+     * */
     private void hideAndShowPageNum(){
         if (pdf_num_container.getVisibility() == View.INVISIBLE){
             pdf_num_container.setVisibility(View.VISIBLE);
-            /*totalPages_num = cv_pdf.getPageCount();
-            currentPage_num = cv_pdf.getCurrentPage() + 1;
-            pageNum_str = currentPage_num + "/" + totalPages_num;*/
-            txt_page.setText(getPageNum_str());
+            setTextWithPageNum();
         }else {
             pdf_num_container.setVisibility(View.INVISIBLE);
         }
     }
 
+
+
+    /**
+     * call back {@link OnTapListener pdfView}
+     * */
     @Override
     public boolean onTap(MotionEvent e) {
        hideAndShowPageNum();
+        setTextWithPageNum();
         return false;
     }
 
+    /**
+     * call back {@link OnPageScrollListener pdfView}
+     * */
     @Override
     public void onPageScrolled(int page, float positionOffset) {
         if (positionOffset > 0){
             pdf_num_container.setVisibility(View.INVISIBLE);
         }else if(positionOffset == 0){
             pdf_num_container.setVisibility(View.VISIBLE);
-            /*totalPages_num = cv_pdf.getPageCount();
-            currentPage_num = cv_pdf.getCurrentPage() + 1;
-            pageNum_str = currentPage_num + "/" + totalPages_num;*/
-            txt_page.setText(getPageNum_str());
         }
 
     }
 
+    /**
+    * To get string format of page num (1/2)
+    * */
     private String getPageNum_str(){
         totalPages_num = cv_pdf.getPageCount();
         currentPage_num = cv_pdf.getCurrentPage() + 1;
         return currentPage_num + "/" + totalPages_num;
     }
+
+    /**
+     * To set the pageNum text with page number
+     * */
+    private void setTextWithPageNum(){
+        txt_page.setText(getPageNum_str());
+    }
+
 }

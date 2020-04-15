@@ -3,7 +3,9 @@ package com.ahmed.customapp.MainApp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 
 import com.ahmed.customapp.Calulator.CalculatorActivity;
@@ -15,6 +17,7 @@ import com.ahmed.customapp.WeActivity;
 
 public class MasterActivity extends AppCompatActivity {
 
+    private static final String TAG = "MasterActivity";
 
     private Button btn_quran;
     private Button btn_calculator;
@@ -38,7 +41,11 @@ public class MasterActivity extends AppCompatActivity {
 
         onViewClicked();
 
+
+
+
     }
+
 
     private void initViews(){
         btn_quran = findViewById(R.id.btn_quran);

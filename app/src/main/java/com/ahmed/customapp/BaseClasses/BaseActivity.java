@@ -1,12 +1,17 @@
 package com.ahmed.customapp.BaseClasses;
 
 import android.content.SharedPreferences;
+import android.view.View;
+import android.widget.TextView;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.ahmed.customapp.R;
+import com.google.android.material.snackbar.Snackbar;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 public class BaseActivity extends AppCompatActivity {
 
@@ -76,5 +81,7 @@ public class BaseActivity extends AppCompatActivity {
 
         return sharedPreferences.getString(key,defaultValue);
     }
+
+
 
 }
