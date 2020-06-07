@@ -6,7 +6,7 @@
     <application>
         <!-- to display showcaseview, this activity and its' style must be added -->
         <activity
-            android:name="com.ahmed.customapp.MainApp.showCaseLibrary.ShowcaseActivity"
+            android:name="com.example.myshowcase.showCaseLibrary.ShowcaseActivity"
             android:theme="@style/ShowcaseTransparentTheme"/>
     </application>
 </manifest>
