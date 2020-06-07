@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">CustomApp</string>
+    <string name="add">+</string>
+    <string name="sub">-</string>
+    <string name="multi">*</string>
+    <string name="div">÷</string>
+    <string name="mod">%</string>
+    <string name="equal">=</string>
+    <string name="num_format">^(0*[1-9][0-9]*(\\.[0-9]+)?|0+\\.[0-9]*[1-9][0-9]*)$</string>
+    <string name="dot">.</string>
+    <string name="clr">AC</string>
+
+
+    <!--Quran-->
+    <string name="title_activity_test_fragment">TestFragment</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="quran">Quran</string>
+    <string name="hadeath">Hadeath</string>
+    <string name="radio">Radio</string>
+    <string name="hello">Hello</string>
+    <string name="quran_kareem">Quran Kareem</string>
+    <string name="txt_zawia">Zawia</string>
+    <string name="basic_calculator">Basic Calculator</string>
+    <string name="calculator_description">A calculator with basic functions add,multiply,division,Subtraction. Build with gridList,guidLines</string>
+    <string name="quran_description">A calculator with basic functions add,multiply,division,Subtraction. Build with gridList,guidLines</string>
+    <string name="open_quran">Open Quran</string>
+    <string name="open_calculator">Open Calculator</string>
+
+
+    <string name="title_1">Cool card</string>
+    <string name="title_2">Ok card</string>
+    <string name="title_3">Bad card</string>
+    <string name="title_4">Ugly card</string>
+
+    <string name="text_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Etiam eget ligula eu lectus lobortis condimentum.</string>
+    <string name="txt_description">Description</string>
+    <string name="my_name">Ahmed Mohamed Ahmed</string>
+    <string name="txt_email">Email</string>
+    <string name="call">Call</string>
+    <string name="contact_details">Contact details</string>
+    <string name="my_email">ahmedmohamedaneng@gmail.com</string>
+    <string name="about">About</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="home_second">Home Second</string>
+    <string name="profile">Profile</string>
+    <string name="cv">CV</string>
+    <string name="title">Title</string>
+    <string name="_0_0">0/0</string>
+    <string name="military_status">Military Status</string>
+    <string name="completed">Completed</string>
+    <string name="marital_status">Marital Status</string>
+    <string name="married">Married</string>
+    <string name="nationality">Nationality</string>
+    <string name="egyptian">Egyptian</string>
+
+    <string name="txt_no_browser_to_open">You do not have any browser to open web page</string>
+    <string name="some_thing_wrong">Some Thing Went Wrong</string>
+    <string name="txt_whats_app_not_installed">WhatsApp not installed</string>
+    <string name="my_num">01124466700</string>
+    <string name="cv_name">cv.pdf</string>
+
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#37474f</color>
+    <color name="colorPrimaryDark">#102027</color>
+    <color name="ColorPrimaryLight">#62727b</color>
+    <color name="fadeColorPrimaryLight">#D062727B</color>
+    <color name="extremelyFadeColorPrimaryLight">#3262727B</color>
+    <color name="fadeGray">#41D5D3D3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+
+    <color name="red">#f9031f</color>
+    <color name="black">#000000</color>
+    <color name="white">#fff</color>
+    <color name="orange">#ff8800</color>
+    <color name="Gray">#41403f</color>
+    <color name="lightGray">#aea9a4</color>
+    <color name="fadedGray">#83BDBBB8</color>
+    <color name="extremelyFadedGray">#85DCDADA</color>
+
+
+    <!--Quran-->
+    <color name="quran_colorPrimary">#624c3e</color>
+    <color name="quran_colorPrimaryDark">#2a211b</color>
+    <color name="quran_colorAccent">#edc873</color>
+	<color name="fadewite">#407c604e</color>
+
+    <color name="txtColor_quran">#d8a954</color>
+
+
+
+        <color name="intro_title">#fff</color>
+        <color name="intro_text">#eeeeee</color>
+        <color name="intro_button_background">#666666</color>
+        <color name="intro_button_text">#ffffff</color>
+
+
+</resources>
