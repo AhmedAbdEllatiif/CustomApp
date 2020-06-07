@@ -18,10 +18,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         />
 
-    <androidx.viewpager.widget.ViewPager
+    <com.ahmed.customapp.MyViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:clipToPadding="false"
         android:overScrollMode="never"

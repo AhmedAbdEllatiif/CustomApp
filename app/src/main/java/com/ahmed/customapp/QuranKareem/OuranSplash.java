@@ -11,7 +11,7 @@ import com.ahmed.customapp.R;
 
 import androidx.constraintlayout.motion.widget.MotionLayout;
 
-public class Splash extends BaseActivity {
+public class OuranSplash extends BaseActivity {
 
 
     private MotionLayout quran_motion_layout;
@@ -37,9 +37,9 @@ public class Splash extends BaseActivity {
                     public void run() {
                         Intent intent = new Intent(activity,FragmentsContainer.class);
 
-                        //overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                        //overridePendingTransition(R.anim.show_buttons, R.anim.hide_buttons);
                         ActivityOptions options = ActivityOptions
-                                .makeSceneTransitionAnimation(Splash.this,background, "robot");
+                                .makeSceneTransitionAnimation(OuranSplash.this,background, "robot");
                         //startActivity(intent, options.toBundle());
                         startActivity(intent);
                         finish();

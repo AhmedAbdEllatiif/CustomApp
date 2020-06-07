@@ -24,6 +24,15 @@
     <color name="quran_colorPrimaryDark">#2a211b</color>
     <color name="quran_colorAccent">#edc873</color>
 	<color name="fadewite">#407c604e</color>
+
     <color name="txtColor_quran">#d8a954</color>
+
+
+
+        <color name="intro_title">#fff</color>
+        <color name="intro_text">#eeeeee</color>
+        <color name="intro_button_background">#666666</color>
+        <color name="intro_button_text">#ffffff</color>
+
 
 </resources>

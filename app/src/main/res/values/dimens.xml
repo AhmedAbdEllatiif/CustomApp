@@ -16,5 +16,18 @@
     <dimen name="card_corners_main_activity">100dp</dimen>
     <dimen name="main_activity_title">25sp</dimen>
 
+    <!--Fab sizes-->
+    <dimen name="standard_55">55dp</dimen>
+    <dimen name="standard_105">105dp</dimen>
+    <dimen name="standard_155">150dp</dimen>
+
+
+
+        <dimen name="padding">20dp</dimen>
+        <dimen name="margin_top">10dp</dimen>
+        <dimen name="textSize_title">17sp</dimen>
+        <dimen name="textSize_description">14sp</dimen>
+        <dimen name="lineSpacing_description">3.5sp</dimen>
+
 
 </resources>

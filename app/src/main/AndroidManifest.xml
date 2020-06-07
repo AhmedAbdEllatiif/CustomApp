@@ -16,59 +16,40 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <!--MainActivity-->
+        <activity android:name=".CelebrationActivity"></activity>
+        <!-- MainActivity -->
         <activity
             android:name=".MainApp.MainActivity"
-            android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar"
             android:exported="true"
-            >
-        </activity>
-
-
-        <!--MasterActivity-->
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar"></activity> <!-- MasterActivity -->
         <activity android:name=".MainApp.MasterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-
-        <!--AnimateActivity-->
-        <activity android:name=".Test.AnimateActivity"/>
-
-        <!--CalculatorActivity-->
+        </activity> <!-- AnimateActivity -->
+        <activity android:name=".Test.AnimateActivity" /> <!-- CalculatorActivity -->
         <activity
             android:name=".Calulator.CalculatorActivity"
             android:theme="@style/CalculatorTheme" />
-
-        <activity android:name=".WeActivity" />
-
-        <!--MyAppsActivity-->
-        <activity android:name=".MyAppsActivity" />
-
-
-
-        <!--fragments container for quran-->
+        <activity android:name=".WeActivity" /> <!-- MyAppsActivity -->
+        <activity android:name=".MyAppsActivity" /> <!-- fragments container for quran -->
         <activity
             android:name=".QuranKareem.FragmentsContainer"
             android:label="@string/title_activity_test_fragment"
-            android:theme="@style/AppTheme.bottomNavigation" />
-
-        <!--QuranKareem Splash-->
+            android:theme="@style/AppTheme.bottomNavigation" /> <!-- QuranKareem OuranSplash -->
         <activity
-            android:name=".QuranKareem.Splash"
-            android:theme="@style/AppTheme.bottomNavigation" />
-
-        <!--Quran Soura Activity-->
+            android:name=".QuranKareem.OuranSplash"
+            android:theme="@style/AppTheme.bottomNavigation" /> <!-- Quran Soura Activity -->
         <activity
             android:name=".QuranKareem.Soura"
             android:theme="@style/AppTheme.SlidrActivityTheme" />
 
-
+        <activity
+            android:name=".MainApp.ShowCaseLibrary.ShowcaseActivity"
+            android:theme="@style/ShowcaseTransparentTheme"/>
     </application>
 
 </manifest>

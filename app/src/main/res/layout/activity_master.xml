@@ -8,6 +8,9 @@
     tools:context=".MainApp.MasterActivity"
     android:theme="@style/AppTheme"
     >
+
+
+
         <Button
             android:id="@+id/btn_quran"
             android:layout_width="wrap_content"
@@ -25,7 +28,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Calculator"
-
         app:layout_constraintTop_toBottomOf="@+id/btn_quran"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -78,10 +80,29 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_MainActivity"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_celebrate"
+        />
+
+    <Button
+        android:id="@+id/btn_celebrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Celebrate Activity"
+        app:layout_constraintTop_toBottomOf="@+id/btn_animate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         />
 
 
+    <include
+        android:id="@+id/fab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/fab_button_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

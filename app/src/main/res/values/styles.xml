@@ -66,4 +66,15 @@
     </style>
 
 
+    <!--/////////////////////////////////ShowCase Style//////////////////////////////////////////-->
+    <style name="ShowcaseBaseTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="ShowcaseTransparentTheme" parent="ShowcaseBaseTheme"/>
+
 </resources>
