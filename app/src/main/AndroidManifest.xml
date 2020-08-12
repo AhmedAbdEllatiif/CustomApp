@@ -15,15 +15,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".QRCodeActivity"></activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar">
-
-
-
-        </activity>
-        <activity android:name=".Test.AnimateActivity"></activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".Test.AnimateActivity" />
         <activity
             android:name=".Calulator.CalculatorActivity"
             android:theme="@style/CalculatorTheme" />
