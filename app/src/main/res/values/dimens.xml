@@ -28,6 +28,7 @@
         <dimen name="textSize_title">17sp</dimen>
         <dimen name="textSize_description">14sp</dimen>
         <dimen name="lineSpacing_description">3.5sp</dimen>
+    <dimen name="btn_width_mater_activity">150dp</dimen>
 
 
 </resources>

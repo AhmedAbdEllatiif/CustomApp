@@ -76,5 +76,11 @@
     <string name="txt_whats_app_not_installed">WhatsApp not installed</string>
     <string name="my_num">01124466700</string>
     <string name="cv_name">cv.pdf</string>
+    <string name="calculator">Calculator</string>
+    <string name="my_apps">My Apps</string>
+    <string name="we_activity">We Activity</string>
+    <string name="main_activity">Main Activity</string>
+    <string name="animate_activity">Animate Activity</string>
+    <string name="qr_activity">QR Activity</string>
 
 </resources>

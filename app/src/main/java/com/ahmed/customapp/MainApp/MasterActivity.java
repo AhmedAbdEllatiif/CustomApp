@@ -19,8 +19,9 @@ import android.widget.TextView;
 import com.ahmed.customapp.Calulator.CalculatorActivity;
 import com.ahmed.customapp.CelebrationActivity;
 
-import com.ahmed.customapp.MainApp.ShowCaseLibrary.ShowcaseManager;
+
 import com.ahmed.customapp.MyAppsActivity;
+import com.ahmed.customapp.QRCodeActivity;
 import com.ahmed.customapp.QuranKareem.OuranSplash;
 import com.ahmed.customapp.R;
 import com.ahmed.customapp.Test.AnimateActivity;
@@ -42,6 +43,7 @@ public class MasterActivity extends AppCompatActivity {
     private Button btn_MainActivity;
     private Button btn_animate;
     private Button btn_celebrate;
+    private Button btn_QRCodeActivity;
 
 
     private static final int QURAN = 0;
@@ -51,6 +53,7 @@ public class MasterActivity extends AppCompatActivity {
     private static final int MAIN_ACTIVITY = 4;
     private static final int ANIMATE_ACTIVITY = 5;
     private static final int CELEBRATE_ACTIVITY = 6;
+    private static final int QR_ACTIVITY = 7;
 
 
     //Fab
@@ -78,28 +81,8 @@ public class MasterActivity extends AppCompatActivity {
         initViews();
 
         onViewClicked();
-
-       // startWithMainFab();
-
-
-        //fab_show_case();
-        //closeFABMenu();
-
-        //sequence();
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                fab_show_case();
-            }
-        },1000);
-
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-    }
 
     private void initViews(){
         btn_quran = findViewById(R.id.btn_quran);
@@ -109,6 +92,7 @@ public class MasterActivity extends AppCompatActivity {
         btn_MainActivity = findViewById(R.id.btn_MainActivity);
         btn_animate = findViewById(R.id.btn_animate);
         btn_celebrate = findViewById(R.id.btn_celebrate);
+        btn_QRCodeActivity = findViewById(R.id.btn_QRCodeActivity);
 
         //fab
         main_fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -145,50 +129,9 @@ public class MasterActivity extends AppCompatActivity {
         btn_We.setOnClickListener(v -> openActivity(WE));
         btn_MainActivity.setOnClickListener(v -> openActivity(MAIN_ACTIVITY));
         btn_animate.setOnClickListener(v -> openActivity(ANIMATE_ACTIVITY));
-        btn_celebrate.setOnClickListener(v -> {
-            fab_show_case();
-           // openActivity(CELEBRATE_ACTIVITY);
-        });
+        btn_celebrate.setOnClickListener(v -> { openActivity(CELEBRATE_ACTIVITY); });
+        btn_QRCodeActivity.setOnClickListener(v -> openActivity(QR_ACTIVITY));
 
-        onFabClicked();
-    }
-
-
-    private void openActivity(int activityCode){
-        Intent intent;
-        switch (activityCode){
-            case QURAN :
-                intent = new Intent(this, OuranSplash.class);
-                sequence();
-                break;
-            case CALCULATOR :
-                intent = new Intent(this, CalculatorActivity.class);
-                break;
-            case MY_APPS :
-                intent = new Intent(this, MyAppsActivity.class);
-                simple();
-                break;
-            case WE :
-                intent = new Intent(this, WeActivity.class);
-                break;
-            case ANIMATE_ACTIVITY :
-                intent = new Intent(this, AnimateActivity.class);
-                newShowCase();
-                break;
-            case CELEBRATE_ACTIVITY :
-                intent = new Intent(this, CelebrationActivity.class);
-                newShowCase_roundedRectangle();
-                break;
-            case MAIN_ACTIVITY :
-            default:
-                intent = new Intent(this, MainActivity.class);
-        }
-
-        //startActivity(intent);
-    }
-
-
-    private void onFabClicked(){
         main_fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -200,6 +143,44 @@ public class MasterActivity extends AppCompatActivity {
             }
         });
     }
+
+
+    private void openActivity(int activityCode){
+        Intent intent;
+        switch (activityCode){
+            case QURAN :
+                intent = new Intent(this, OuranSplash.class);
+                break;
+            case CALCULATOR :
+                intent = new Intent(this, CalculatorActivity.class);
+                break;
+            case MY_APPS :
+                intent = new Intent(this, MyAppsActivity.class);
+                break;
+            case WE :
+                intent = new Intent(this, WeActivity.class);
+                break;
+            case ANIMATE_ACTIVITY :
+                intent = new Intent(this, AnimateActivity.class);
+                break;
+            case CELEBRATE_ACTIVITY :
+                intent = new Intent(this, CelebrationActivity.class);
+                break;
+            case QR_ACTIVITY :
+                intent = new Intent(this, QRCodeActivity.class);
+                break;
+            case MAIN_ACTIVITY :
+            default:
+                intent = new Intent(this, MainActivity.class);
+        }
+
+        startActivity(intent);
+    }
+
+
+
+
+
 
     private void showFABMenu(){
         isFABOpen=true;
@@ -328,328 +309,8 @@ public class MasterActivity extends AppCompatActivity {
 
     }
 
-    /*private void sequence(){
-       TapTarget quranTarget = TapTarget.forView(findViewById(R.id.btn_quran), "This is Quran") .transparentTarget(true);
-       TapTarget calculatorTarget = TapTarget.forView(findViewById(R.id.btn_calculator), "This is Calculator")
-               .targetRadius(60)
-               .transparentTarget(true);
-
-        new TapTargetSequence(this)
-                .targets(
-                        quranTarget,
-                        calculatorTarget,
-                        TapTarget.forView(findViewById(R.id.btn_myApps), "You", "Up") .transparentTarget(true),
-                        TapTarget.forView(findViewById(R.id.btn_We), "You", "Up") .transparentTarget(true)
-                                .dimColor(android.R.color.holo_red_dark)
-                                .outerCircleColor(R.color.lightGray)
-                                .targetCircleColor(R.color.colorPrimary)
-                                .textColor(android.R.color.black),
-                        TapTarget.forBounds(new Rect(), "Down", ":^)")
-                                .cancelable(true)
-                                .icon(getDrawable(R.drawable.calculator)))
-                .listener(new TapTargetSequence.Listener() {
-                    // This listener will tell us when interesting(tm) events happen in regards
-                    // to the sequence
-                    @Override
-                    public void onSequenceFinish() {
-                        // Yay
-                        Log.e(TAG, "onSequenceFinish: ");
-                    }
-
-                    @Override
-                    public void onSequenceStep(TapTarget lastTarget, boolean targetClicked) {
-                        Log.e(TAG, "onSequenceStep: ");
-                    }
-
-
-                    @Override
-                    public void onSequenceCanceled(TapTarget lastTarget) {
-                        // Boo
-                        Log.e(TAG, "onSequenceCanceled: ");
-                    }
-                }).start();
-    }*/
-
-    private void sequence(){
-
-        TapTarget quranTarget = TapTarget.forView(findViewById(R.id.btn_quran), "This is Quran") .transparentTarget(true);
-        TapTarget calculatorTarget = TapTarget.forView(findViewById(R.id.btn_calculator), "This is Calculator")
-                .targetRadius(60)
-                .transparentTarget(true);
-        TapTarget weTarget = TapTarget.forView(findViewById(R.id.btn_We), "This is We")
-                .targetRadius(60)
-                .transparentTarget(true);
-        Rect droidTarget = new Rect(0, 0, btn_myApps.getWidth() * 2, btn_myApps.getHeight() * 2);
-        TapTarget mainBtnTarget = TapTarget.forBounds(droidTarget,"Hi Ahmed is Awesome");
-
-        new TapTargetSequence(this)
-                .targets(
-                        quranTarget,
-                        calculatorTarget,
-                        TapTarget.forView(findViewById(R.id.btn_myApps), "You", "Up") .transparentTarget(true),
-                        weTarget,
-                        mainBtnTarget)
-                .listener(new TapTargetSequence.Listener() {
-                    // This listener will tell us when interesting(tm) events happen in regards
-                    // to the sequence
-                    @Override
-                    public void onSequenceFinish() {
-                        // Yay
-                        Log.e(TAG, "onSequenceFinish: ");
-                    }
-
-                    @Override
-                    public void onSequenceStep(TapTarget lastTarget, boolean targetClicked) {
-                        Log.e(TAG, "onSequenceStep: ");
-                    }
-
-
-                    @Override
-                    public void onSequenceCanceled(TapTarget lastTarget) {
-                        // Boo
-                        Log.e(TAG, "onSequenceCanceled: ");
-                    }
-                }).start();
-    }
-
-    private void simple(){
-
-        // Using deprecated methods makes you look way cool
-        //droidTarget.offset(display.getWidth() / 2, display.getHeight() / 2);
-        TapTargetView.showFor(this,                 // `this` is an Activity
-                TapTarget.forView(findViewById(R.id.btn_myApps), "This is a target",
-                        "We have the best targets, believe me")
-                        // All options below are optional
-                        .outerCircleColor(R.color.colorPrimaryDark)      // Specify a color for the outer circle
-                        .outerCircleAlpha(0.96f)            // Specify the alpha amount for the outer circle
-                        .targetCircleColor(R.color.white)   // Specify a color for the target circle
-                        .titleTextSize(20)                  // Specify the size (in sp) of the title text
-                        .titleTextColor(R.color.white)      // Specify the color of the title text
-                        .descriptionTextSize(10)            // Specify the size (in sp) of the description text
-                        .descriptionTextColor(R.color.red)  // Specify the color of the description text
-                        .textColor(R.color.white)           // Specify a color for both the title and description text
-                        .textTypeface(Typeface.SANS_SERIF)  // Specify a typeface for the text
-                        .dimColor(R.color.black)            // If set, will dim behind the view with 30% opacity of the given color
-                        .drawShadow(true)                   // Whether to draw a drop shadow or not
-                        .cancelable(false)                  // Whether tapping outside the outer circle dismisses the view
-                        .tintTarget(true)                   // Whether to tint the target view's color
-                        .transparentTarget(true)           // Specify whether the target is transparent (displays the content underneath)
-                        //.icon(getDrawable(R.drawable.calculator))                     // Specify a custom drawable to draw as the target
-                        .targetRadius(60),                  // Specify the target radius (in dp)
-                new TapTargetView.Listener() {              // The listener can listen for regular clicks, long clicks or cancels
-                    @Override
-                    public void onTargetClick(TapTargetView view) {
-                        super.onTargetClick(view);      // This call is optional
-                        Log.e(TAG, "onTargetClick: ");
-                        Intent intent = new Intent(MasterActivity.this, MyAppsActivity.class);
-                        startActivity(intent);
-                    }
-                });
-
-
-    }
-
-
-    private void fab_show_case(){
-        Log.e(TAG, "fab_show_case: " );
-        Log.e(TAG, "fab_show_case =>> btn_celebrate.getTop ==> " +  btn_celebrate.getTop());
-        Log.e(TAG, "fab_show_case =>> btn_celebrate.getBottom ==> " +  btn_celebrate.getBottom());
-
-        //btn_MainActivity.setVisibility(View.INVISIBLE);
-        ShowcaseManager.Builder builder = new ShowcaseManager.Builder();
-        builder.context(MasterActivity.this)
-                .roundedRectangle()
-                .key("KEY")
-                .developerMode(true)
-                .view(btn_celebrate)
-                //.descriptionImageRes(R.mipmap.ic_launcher)
-                .descriptionTitle("LOREM IPSUM")
-                .descriptionText("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
-                .buttonText("Done")
-                .marginFocusArea(2)
-                .add()
-
-
-                //.key("KEY")
-                //.developerMode(true)
-                .view(btn_animate)
-                .roundedRectangle()
-                //.descriptionImageRes(R.mipmap.ic_launcher)
-                .descriptionTitle("LOREM IPSUM")
-                .descriptionText("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
-                .buttonText("Done")
-               // .marginFocusArea(50)
-                .add()
-
-                .view(btn_MainActivity)
-                .roundedRectangle()
-                //.descriptionImageRes(R.mipmap.ic_launcher)
-                .key("KEY")
-                .developerMode(true)
-                .descriptionTitle("LOREM IPSUM")
-                .descriptionText("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
-                .buttonText("Done")
-                .add()
-                .build()
-                .show();
-    }
-
-    private void startWithMainFab(){
-        TapTargetView.showFor(this,                 // `this` is an Activity
-                TapTarget.forView(findViewById(R.id.fab), "This is a target",
-                        "Press on the Add button to select from menu")
-                        // All options below are optional
-                        .outerCircleColor(R.color.colorPrimaryDark)      // Specify a color for the outer circle
-                        .outerCircleAlpha(0.96f)            // Specify the alpha amount for the outer circle
-                        .targetCircleColor(R.color.white)   // Specify a color for the target circle
-                        .titleTextSize(20)                  // Specify the size (in sp) of the title text
-                        .titleTextColor(R.color.white)      // Specify the color of the title text
-                        .descriptionTextSize(10)            // Specify the size (in sp) of the description text
-                        .descriptionTextColor(R.color.red)  // Specify the color of the description text
-                        .textColor(R.color.white)           // Specify a color for both the title and description text
-                        .textTypeface(Typeface.SANS_SERIF)  // Specify a typeface for the text
-                        .dimColor(R.color.black)            // If set, will dim behind the view with 30% opacity of the given color
-                        .drawShadow(true)                   // Whether to draw a drop shadow or not
-                        .cancelable(false)                  // Whether tapping outside the outer circle dismisses the view
-                        .tintTarget(true)                   // Whether to tint the target view's color
-                        .transparentTarget(true)           // Specify whether the target is transparent (displays the content underneath)
-                        //.icon(getDrawable(R.drawable.calculator))                     // Specify a custom drawable to draw as the target
-                        .targetRadius(40),                  // Specify the target radius (in dp)
-                new TapTargetView.Listener() {              // The listener can listen for regular clicks, long clicks or cancels
-                    @Override
-                    public void onTargetClick(TapTargetView view) {
-                        super.onTargetClick(view);      // This call is optional
-                        Log.e(TAG, "onTargetClick: ");
-                        showFABMenu();
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                fab_show();
-                            }
-                        },500);
-
-                    }
-                });
-    }
-
-
-    private void fab_show(){
-       /* TapTargetView.showFor(this,                 // `this` is an Activity
-                TapTarget.forView(findViewById(R.id.fab_mic), "This is a target",
-                        "We have the best targets, believe me")
-                        // All options below are optional
-                        .outerCircleColor(R.color.colorPrimaryDark)      // Specify a color for the outer circle
-                        .outerCircleAlpha(0.96f)            // Specify the alpha amount for the outer circle
-                        .targetRadius(30)
-                        .targetCircleColor(R.color.white)   // Specify a color for the target circle
-                        .titleTextSize(20)                  // Specify the size (in sp) of the title text
-                        .titleTextColor(R.color.white)      // Specify the color of the title text
-                        .descriptionTextSize(10)            // Specify the size (in sp) of the description text
-                        .descriptionTextColor(R.color.red)  // Specify the color of the description text
-                        .textColor(R.color.white)           // Specify a color for both the title and description text
-                        .textTypeface(Typeface.SANS_SERIF)  // Specify a typeface for the text
-                        .dimColor(R.color.black)            // If set, will dim behind the view with 30% opacity of the given color
-                        .drawShadow(true)                   // Whether to draw a drop shadow or not
-                        .cancelable(false)                  // Whether tapping outside the outer circle dismisses the view
-                        .tintTarget(true)                   // Whether to tint the target view's color
-                        .transparentTarget(true)  ,         // Specify whether the target is transparent (displays the content underneath)
-                        //.icon(getDrawable(R.drawable.calculator))                     // Specify a custom drawable to draw as the target
-                                        // Specify the target radius (in dp)
-                new TapTargetView.Listener() {              // The listener can listen for regular clicks, long clicks or cancels
-                    @Override
-                    public void onTargetClick(TapTargetView view) {
-                        super.onTargetClick(view);      // This call is optional
-                        Log.e(TAG, "onTargetClick: ");
-                        Intent intent = new Intent(MasterActivity.this, MyAppsActivity.class);
-                        startActivity(intent);
-                    }
-                });*/
-        TapTarget main_target = TapTarget.forView(findViewById(R.id.fab), "This is Mic")
-                .targetRadius(40)
-                .transparentTarget(true);
-
-        TapTarget mic_target = TapTarget.forView(findViewById(R.id.mic_test), "This is Mic")
-                .targetRadius(25)
-                .transparentTarget(true);
-
-        TapTarget cam_target = TapTarget.forView(findViewById(R.id.cam_test), "This is Cam")
-                .targetRadius(30)
-                .transparentTarget(true);
-
-        TapTarget map_target = TapTarget.forView(findViewById(R.id.map_test), "This is Map")
-                .targetRadius(35)
-                .transparentTarget(true);
-
-        new TapTargetSequence(this)
-                .targets(
-                        map_target,
-                        cam_target,
-                        mic_target)
-                .listener(new TapTargetSequence.Listener() {
-                    // This listener will tell us when interesting(tm) events happen in regards
-                    // to the sequence
-                    @Override
-                    public void onSequenceFinish() {
-                        // Yay
-                        Log.e(TAG, "onSequenceFinish: ");
-                    }
-
-                    @Override
-                    public void onSequenceStep(TapTarget lastTarget, boolean targetClicked) {
-                        Log.e(TAG, "onSequenceStep: ");
-                    }
-
-
-                    @Override
-                    public void onSequenceCanceled(TapTarget lastTarget) {
-                        // Boo
-                        Log.e(TAG, "onSequenceCanceled: ");
-                    }
-                }).start();
-    }
 
 
 
-    private void newShowCase(){
-        /*ShowcaseManager.Builder builder = new ShowcaseManager.Builder();
-        builder.context(MasterActivity.this)
-                .rectangle()
-                .key("KEY")
-                .developerMode(true)
-                .view(btn_animate)
-                //.descriptionImageRes(R.mipmap.ic_launcher)
-                .descriptionTitle("LOREM IPSUM")
-                .descriptionText("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
-                .buttonText("Done")
-                .add()
-                .build()
-                .show();*/
-    }
 
-    private void newShowCase_roundedRectangle(){
-       /* ShowcaseManager.Builder builder = new ShowcaseManager.Builder();
-
-        builder.context(MasterActivity.this)
-                .roundedRectangle()
-                . marginFocusArea(7)
-                .key("KEY")
-                .developerMode(true)
-                .view(btn_celebrate)
-                //.descriptionImageRes(R.mipmap.ic_launcher)
-                .descriptionTitle("LOREM IPSUM")
-                .descriptionText("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
-                .buttonText("Done")
-                .add()
-
-                .view(btn_quran)
-                .roundedRectangle()
-                .descriptionImageRes(R.mipmap.ic_launcher_round)
-                .descriptionTitle("LOREM IPSUM DOLOR-2")
-                .descriptionText("Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
-                .buttonText("Cancel")
-                .marginFocusArea(7)
-                .add()
-                .build()
-                .show();*/
-    }
 }
