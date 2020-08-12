@@ -12,7 +12,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.ahmed.customapp.Helpers.MyRecyclerViewDecoration;
+import com.ahmed.customapp.MainApp.Helpers.MyRecyclerViewDecoration;
 import com.ahmed.customapp.R;
 
 import java.util.Objects;

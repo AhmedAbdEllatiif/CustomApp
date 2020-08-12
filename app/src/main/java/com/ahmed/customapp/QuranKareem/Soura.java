@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
-import com.ahmed.customapp.BaseActivity;
+import com.ahmed.customapp.BaseClasses.BaseActivity;
 import com.ahmed.customapp.QuranKareem.Adapters.SouraAdapter;
 import com.ahmed.customapp.QuranKareem.QuranModels.SouraModel;
 import com.ahmed.customapp.R;

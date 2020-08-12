@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -15,10 +16,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".QRCodeActivity"></activity>
+=======
+        <activity android:name=".CelebrationActivity"></activity>
+        <!-- MainActivity -->
+>>>>>>> basicBranch
         <activity
-            android:name=".MainActivity"
+            android:name=".MainApp.MainActivity"
+            android:exported="true"
             android:label="@string/title_activity_main"
+<<<<<<< HEAD
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".Test.AnimateActivity" />
         <activity
@@ -26,24 +34,36 @@
             android:theme="@style/CalculatorTheme" />
         <activity android:name=".WeActivity" />
         <activity android:name=".MasterActivity">
+=======
+            android:theme="@style/AppTheme.NoActionBar"></activity> <!-- MasterActivity -->
+        <activity android:name=".MainApp.MasterActivity">
+>>>>>>> basicBranch
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity> <!-- AnimateActivity -->
+        <activity android:name=".Test.AnimateActivity" /> <!-- CalculatorActivity -->
         <activity
-            android:name=".QuranKareem.Soura"
-            android:theme="@style/AppTheme.SlidrActivityTheme" />
-        <activity
-            android:name=".QuranKareem.Splash"
-            android:theme="@style/AppTheme.bottomNavigation" />
-        <activity android:name=".MyAppsActivity" />
-        <activity android:name=".ProfileFragment" />
+            android:name=".Calulator.CalculatorActivity"
+            android:theme="@style/CalculatorTheme" />
+        <activity android:name=".WeActivity" /> <!-- MyAppsActivity -->
+        <activity android:name=".MyAppsActivity" /> <!-- fragments container for quran -->
         <activity
             android:name=".QuranKareem.FragmentsContainer"
             android:label="@string/title_activity_test_fragment"
-            android:theme="@style/AppTheme.bottomNavigation" />
+            android:theme="@style/AppTheme.bottomNavigation" /> <!-- QuranKareem OuranSplash -->
+        <activity
+            android:name=".QuranKareem.OuranSplash"
+            android:theme="@style/AppTheme.bottomNavigation" /> <!-- Quran Soura Activity -->
+        <activity
+            android:name=".QuranKareem.Soura"
+            android:theme="@style/AppTheme.SlidrActivityTheme" />
+
+        <activity
+            android:name=".MainApp.ShowCaseLibrary.ShowcaseActivity"
+            android:theme="@style/ShowcaseTransparentTheme"/>
     </application>
 
 </manifest>

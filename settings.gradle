@@ -1,2 +1,3 @@
+include ':myShowcase'
 rootProject.name='CustomApp'
 include ':app'

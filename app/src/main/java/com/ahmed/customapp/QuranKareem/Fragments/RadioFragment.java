@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
-import com.ahmed.customapp.BaseFragment;
+import com.ahmed.customapp.BaseClasses.BaseFragment;
 import com.ahmed.customapp.QuranKareem.Adapters.RadioAdapter;
 import com.ahmed.customapp.QuranKareem.FragmentsContainer;
 import com.ahmed.customapp.QuranKareem.QuranApi.ApiManger;
@@ -129,8 +129,8 @@ public class RadioFragment extends BaseFragment {
 
                     @Override
                     public void onFailure(Call<RadioResponse> call, Throwable t) {
-
-                        showMessage("Error", t.getLocalizedMessage());
+                        //TODO: check where is showMessage method it throws can not find symbol
+                        //showMessage("Error", t.getLocalizedMessage());
                     }
                 });
 

@@ -5,7 +5,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.ahmed.customapp.BaseActivity;
+import com.ahmed.customapp.BaseClasses.BaseActivity;
 import com.ahmed.customapp.QuranKareem.Fragments.HadeathFragment;
 import com.ahmed.customapp.QuranKareem.Fragments.QuranFragment;
 import com.ahmed.customapp.QuranKareem.Fragments.RadioFragment;

@@ -1,24 +1,18 @@
 package com.ahmed.customapp;
 
-import androidx.fragment.app.FragmentStatePagerAdapter;
-import androidx.viewpager.widget.ViewPager;
-import jp.wasabeef.glide.transformations.BlurTransformation;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 
+import com.ahmed.customapp.BaseClasses.BaseActivity;
 import com.ahmed.customapp.Calulator.CalculatorActivity;
-import com.ahmed.customapp.Helpers.MyAppsFragmentsHelper;
-import com.ahmed.customapp.QuranKareem.Splash;
-import com.bumptech.glide.Glide;
+import com.ahmed.customapp.MainApp.Helpers.MyAppsFragmentsHelper;
+import com.ahmed.customapp.QuranKareem.OuranSplash;
 import com.bumptech.glide.load.resource.bitmap.BitmapTransformation;
-import com.bumptech.glide.request.RequestOptions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +21,7 @@ public class MyAppsActivity extends BaseActivity implements
         CompoundButton.OnCheckedChangeListener {
 
     private Button mButton;
-    private ViewPager mViewPager;
+    private MyViewPager mViewPager;
     private CheckBox checkBox;
 
     private CardPagerAdapter mCardAdapter;
@@ -43,8 +37,8 @@ public class MyAppsActivity extends BaseActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_apps);
         BitmapTransformation bitmapTransformation;
-        mViewPager = (ViewPager) findViewById(R.id.viewPager);
-        setupAppsPagerAdapter();
+        mViewPager = (MyViewPager) findViewById(R.id.viewPager);
+
 
         ImageView imageView = findViewById(R.id.background);
        /* RequestOptions requestOptions = new RequestOptions();
@@ -61,27 +55,39 @@ public class MyAppsActivity extends BaseActivity implements
         checkBox = findViewById(R.id.checkBox);
         checkBox.setOnCheckedChangeListener(this);
         checkBox.setChecked(true);
-        /*mCardAdapter = new CardPagerAdapter();
+
+        mCardAdapter = new CardPagerAdapter();
         mCardAdapter.addCardItem(new CardItem(R.string.title_1, R.string.text_1,R.drawable.splash));
         mCardAdapter.addCardItem(new CardItem(R.string.title_2, R.string.text_1,R.drawable.splash));
         mCardAdapter.addCardItem(new CardItem(R.string.title_3, R.string.text_1,R.drawable.splash));
-        mCardAdapter.addCardItem(new CardItem(R.string.title_4, R.string.text_1,R.drawable.splash));*/
+        mCardAdapter.addCardItem(new CardItem(R.string.title_4, R.string.text_1,R.drawable.splash));
 
-
-
+        mCardShadowTransformer = new ShadowTransformer(mViewPager, mCardAdapter);
+        setupAppsPagerAdapter();
     }
 
     /**
      * To setup the viewPager with the MyAppsAdapter
      * */
     private void setupAppsPagerAdapter() {
-        appsPagerAdapter = new MyAppsPagerAdapter(getSupportFragmentManager(),
+     /*   appsPagerAdapter = new MyAppsPagerAdapter(getSupportFragmentManager(),
                 getElevation(50, this), getMyAppsFragments(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
 
         mFragmentCardShadowTransformer = new ShadowTransformer(mViewPager, appsPagerAdapter);
-        mViewPager.setAdapter(appsPagerAdapter);
+        //mViewPager.setAdapter(appsPagerAdapter);
+        //mViewPager.setPageTransformer(false, mCardShadowTransformer);
+        //mViewPager.setOffscreenPageLimit(3);
+
+        mCardShadowTransformer = new ShadowTransformer(mViewPager, mCardAdapter);
+        mViewPager.setAdapter(mCardAdapter);
+        mViewPager.setPageTransformer(false, mCardShadowTransformer);
+
+        mViewPager.setOffscreenPageLimit(3);*/
+        //mCardShadowTransformer.enableScaling(true);
+        mViewPager.setAdapter(mCardAdapter);
         mViewPager.setPageTransformer(false, mCardShadowTransformer);
         mViewPager.setOffscreenPageLimit(3);
+        mCardShadowTransformer.enableScaling(true);
     }
 
     /**
@@ -95,7 +101,7 @@ public class MyAppsActivity extends BaseActivity implements
      * To open Quran Application
      * */
     private void openQuran() {
-        Intent intent = new Intent(this, Splash.class);
+        Intent intent = new Intent(this, OuranSplash.class);
         startActivity(intent);
     }
 
@@ -145,7 +151,7 @@ public class MyAppsActivity extends BaseActivity implements
     @Override
     public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
         // mCardShadowTransformer.enableScaling(b);
-        mFragmentCardShadowTransformer.enableScaling(b);
+        //mFragmentCardShadowTransformer.enableScaling(b);
     }
 
 
