@@ -3,11 +3,7 @@ package com.ahmed.customapp.MainApp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Rect;
-import android.graphics.Typeface;
 import android.os.Bundle;
-import android.os.Handler;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
@@ -20,6 +16,9 @@ import com.ahmed.customapp.Calulator.CalculatorActivity;
 import com.ahmed.customapp.CelebrationActivity;
 
 
+import com.ahmed.customapp.Services.ForegroundServices.ForegroundServiceActivity;
+import com.ahmed.customapp.Services.JobIntentService.JobIntentServiceActivity;
+import com.ahmed.customapp.Services.JobScheduler.JobSchedulerActivity;
 import com.ahmed.customapp.MyAppsActivity;
 import com.ahmed.customapp.QRCodeActivity;
 import com.ahmed.customapp.QuranKareem.OuranSplash;
@@ -27,9 +26,6 @@ import com.ahmed.customapp.R;
 import com.ahmed.customapp.Test.AnimateActivity;
 import com.ahmed.customapp.WeActivity;
 
-import com.getkeepsafe.taptargetview.TapTarget;
-import com.getkeepsafe.taptargetview.TapTargetSequence;
-import com.getkeepsafe.taptargetview.TapTargetView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MasterActivity extends AppCompatActivity {
@@ -44,6 +40,9 @@ public class MasterActivity extends AppCompatActivity {
     private Button btn_animate;
     private Button btn_celebrate;
     private Button btn_QRCodeActivity;
+    private Button btn_jobSchedulerActivity;
+    private Button btn_ForegroundActivity;
+    private Button btn_JobIntentServiceActivity;
 
 
     private static final int QURAN = 0;
@@ -54,6 +53,9 @@ public class MasterActivity extends AppCompatActivity {
     private static final int ANIMATE_ACTIVITY = 5;
     private static final int CELEBRATE_ACTIVITY = 6;
     private static final int QR_ACTIVITY = 7;
+    private static final int JOB_SCHEDULER_ACTIVITY = 8;
+    private static final int FOREGROUND_ACTIVITY = 9;
+    private static final int JOB_INTENT_SERVICE_ACTIVITY = 10;
 
 
     //Fab
@@ -93,6 +95,9 @@ public class MasterActivity extends AppCompatActivity {
         btn_animate = findViewById(R.id.btn_animate);
         btn_celebrate = findViewById(R.id.btn_celebrate);
         btn_QRCodeActivity = findViewById(R.id.btn_QRCodeActivity);
+        btn_jobSchedulerActivity = findViewById(R.id.btn_jobSchedulerActivity);
+        btn_ForegroundActivity = findViewById(R.id.btn_ForegroundActivity);
+        btn_JobIntentServiceActivity = findViewById(R.id.btn_jobIntentServiceActivity);
 
         //fab
         main_fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -131,6 +136,9 @@ public class MasterActivity extends AppCompatActivity {
         btn_animate.setOnClickListener(v -> openActivity(ANIMATE_ACTIVITY));
         btn_celebrate.setOnClickListener(v -> { openActivity(CELEBRATE_ACTIVITY); });
         btn_QRCodeActivity.setOnClickListener(v -> openActivity(QR_ACTIVITY));
+        btn_jobSchedulerActivity.setOnClickListener(v -> openActivity(JOB_SCHEDULER_ACTIVITY));
+        btn_ForegroundActivity.setOnClickListener(v -> openActivity(FOREGROUND_ACTIVITY));
+        btn_JobIntentServiceActivity.setOnClickListener(v -> openActivity(JOB_INTENT_SERVICE_ACTIVITY));
 
         main_fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -168,6 +176,15 @@ public class MasterActivity extends AppCompatActivity {
                 break;
             case QR_ACTIVITY :
                 intent = new Intent(this, QRCodeActivity.class);
+                break;
+            case JOB_SCHEDULER_ACTIVITY:
+                intent = new Intent(this, JobSchedulerActivity.class);
+                break;
+            case FOREGROUND_ACTIVITY:
+                intent = new Intent(this, ForegroundServiceActivity.class);
+                break;
+            case JOB_INTENT_SERVICE_ACTIVITY:
+                intent = new Intent(this, JobIntentServiceActivity.class);
                 break;
             case MAIN_ACTIVITY :
             default:

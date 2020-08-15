@@ -75,6 +75,29 @@
             android:layout_marginTop="10dp"
             android:text="@string/qr_activity" />
 
+        <Button
+            android:id="@+id/btn_jobSchedulerActivity"
+            android:layout_width="@dimen/btn_width_mater_activity"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/job_scheduler" />
+
+        <Button
+            android:id="@+id/btn_ForegroundActivity"
+            android:layout_width="@dimen/btn_width_mater_activity"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/foreground_service" />
+
+
+        <Button
+            android:id="@+id/btn_jobIntentServiceActivity"
+            android:layout_width="@dimen/btn_width_mater_activity"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/job_intent_service" />
+
+
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

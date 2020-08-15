@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="left"
     android:orientation="vertical"
-    android:padding="@dimen/padding">
+    android:padding="@dimen/page_padding">
 
     <ImageView
         android:id="@+id/imageView_description"
@@ -44,7 +44,7 @@
         android:id="@+id/button_done"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/padding"
+        android:layout_marginTop="@dimen/page_padding"
         android:fontFamily="sans-serif"
         android:paddingBottom="15dp"
         android:paddingLeft="35dp"

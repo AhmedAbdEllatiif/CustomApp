@@ -82,5 +82,8 @@
     <string name="main_activity">Main Activity</string>
     <string name="animate_activity">Animate Activity</string>
     <string name="qr_activity">QR Activity</string>
+    <string name="job_scheduler">Job Scheduler</string>
+    <string name="foreground_service">Foreground Service</string>
+    <string name="job_intent_service">Job Intent Service</string>
 
 </resources>
