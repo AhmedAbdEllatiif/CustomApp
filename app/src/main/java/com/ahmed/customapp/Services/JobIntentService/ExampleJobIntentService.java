@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.core.app.JobIntentService;
 
 /**
- * Helps you to make a foreground service executed a background thread automatically
+ * Helps you to make a foreground service executed in a background thread automatically
  * Enqueue every new Intent sent one after another
  * try send a then ab then abc from the Activity
  */

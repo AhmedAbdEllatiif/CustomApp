@@ -1,8 +1,10 @@
 package com.ahmed.customapp.MainApp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -12,6 +14,7 @@ import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.ahmed.customapp.BroadcastReceivers.TestServices;
 import com.ahmed.customapp.Calulator.CalculatorActivity;
 import com.ahmed.customapp.CelebrationActivity;
 
@@ -24,6 +27,7 @@ import com.ahmed.customapp.QRCodeActivity;
 import com.ahmed.customapp.QuranKareem.OuranSplash;
 import com.ahmed.customapp.R;
 import com.ahmed.customapp.Test.AnimateActivity;
+import com.ahmed.customapp.Torch.TorchActivity;
 import com.ahmed.customapp.WeActivity;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -43,6 +47,7 @@ public class MasterActivity extends AppCompatActivity {
     private Button btn_jobSchedulerActivity;
     private Button btn_ForegroundActivity;
     private Button btn_JobIntentServiceActivity;
+    private Button btn_TorchActivity;
 
 
     private static final int QURAN = 0;
@@ -56,6 +61,7 @@ public class MasterActivity extends AppCompatActivity {
     private static final int JOB_SCHEDULER_ACTIVITY = 8;
     private static final int FOREGROUND_ACTIVITY = 9;
     private static final int JOB_INTENT_SERVICE_ACTIVITY = 10;
+    private static final int TORCH_ACTIVITY = 11;
 
 
     //Fab
@@ -83,6 +89,40 @@ public class MasterActivity extends AppCompatActivity {
         initViews();
 
         onViewClicked();
+        Intent serviceIntent = new Intent(this, TestServices.class);
+        ContextCompat.startForegroundService(this, serviceIntent);
+
+
+
+        boolean b = getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH);
+      /*  Camera cam = Camera.open();
+        Camera.Parameters p = cam.getParameters();
+        p.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
+        cam.setParameters(p);
+        cam.startPreview();*/
+
+
+        /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            CameraManager camManager = (CameraManager) getSystemService(Context.CAMERA_SERVICE);
+            String cameraId = null;
+            try {
+                cameraId = camManager.getCameraIdList()[0];
+                camManager.setTorchMode(cameraId, true);   //Turn ON
+                Log.e(TAG, "onCreate: isFlashOpened" +  b);
+            } catch (CameraAccessException e) {
+                e.printStackTrace();
+            }
+        }*/ /*else {
+            mCamera = Camera.open();
+            parameters = mCamera.getParameters();
+            parameters.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
+            mCamera.setParameters(parameters);
+            mCamera.startPreview();
+        }*/
+        //TestServices testServices = new TestServices();
+        /*IntentFilter filter = new IntentFilter(Intent.ACTION_SCREEN_ON);
+        MyExampleBroadcastReceiver myExampleBroadcastReceiver =  new MyExampleBroadcastReceiver();
+        registerReceiver(myExampleBroadcastReceiver, filter);*/
     }
 
 
@@ -98,6 +138,7 @@ public class MasterActivity extends AppCompatActivity {
         btn_jobSchedulerActivity = findViewById(R.id.btn_jobSchedulerActivity);
         btn_ForegroundActivity = findViewById(R.id.btn_ForegroundActivity);
         btn_JobIntentServiceActivity = findViewById(R.id.btn_jobIntentServiceActivity);
+        btn_TorchActivity = findViewById(R.id.btn_TorchActivity);
 
         //fab
         main_fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -139,6 +180,7 @@ public class MasterActivity extends AppCompatActivity {
         btn_jobSchedulerActivity.setOnClickListener(v -> openActivity(JOB_SCHEDULER_ACTIVITY));
         btn_ForegroundActivity.setOnClickListener(v -> openActivity(FOREGROUND_ACTIVITY));
         btn_JobIntentServiceActivity.setOnClickListener(v -> openActivity(JOB_INTENT_SERVICE_ACTIVITY));
+        btn_TorchActivity.setOnClickListener(v -> openActivity(TORCH_ACTIVITY));
 
         main_fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -185,6 +227,9 @@ public class MasterActivity extends AppCompatActivity {
                 break;
             case JOB_INTENT_SERVICE_ACTIVITY:
                 intent = new Intent(this, JobIntentServiceActivity.class);
+                break;
+            case TORCH_ACTIVITY:
+                intent = new Intent(this, TorchActivity.class);
                 break;
             case MAIN_ACTIVITY :
             default:

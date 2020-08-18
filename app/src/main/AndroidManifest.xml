@@ -10,6 +10,9 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
 
     <application
         android:name=".App"
@@ -19,8 +22,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Services.JobIntentService.JobIntentServiceActivity"></activity>
-        <!-- Single task to avoid (pressing on notification opens the same activity twice) -->
+        <activity android:name=".Torch.TorchActivity"></activity>
+        <activity android:name=".Services.JobIntentService.JobIntentServiceActivity" /> <!-- Single task to avoid (pressing on notification opens the same activity twice) -->
         <activity
             android:name=".Services.ForegroundServices.ForegroundServiceActivity"
             android:launchMode="singleTask" />
@@ -60,8 +63,19 @@
             android:name=".Services.JobScheduler.MyJobService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
         <service android:name=".Services.ForegroundServices.ExampleService" />
-        <service android:name=".Services.JobIntentService.ExampleJobIntentService"
-            android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service
+            android:name=".Services.JobIntentService.ExampleJobIntentService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <receiver android:name=".BroadcastReceivers.MyExampleBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.SCREEN_ON" />
+                <action android:name="android.intent.action.SCREEN_OFF" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".BroadcastReceivers.TestServices" />
     </application>
 
 </manifest>
